@@ -17,11 +17,11 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout title={siteTitle}>
       <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        script={
-          (src = "https://identity.netlify.com/v1/netlify-identity-widget.js")
-        }
+      // title="All posts"
+      // keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+      // script={
+      //   (src = "https://identity.netlify.com/v1/netlify-identity-widget.js")
+      // }
       />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (
@@ -44,16 +44,6 @@ const BlogIndex = ({ data }, location) => {
           )
         })}
       </div>
-      <script>
-        if (window.netlifyIdentity){" "}
-        {window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/"
-            })
-          }
-        })}
-      </script>
     </Layout>
   )
 }
