@@ -17,11 +17,8 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout title={siteTitle}>
       <SEO
-      // title="All posts"
-      // keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      // script={
-      //   (src = "https://identity.netlify.com/v1/netlify-identity-widget.js")
-      // }
+        title="All posts"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (
