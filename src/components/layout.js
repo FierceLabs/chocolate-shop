@@ -39,7 +39,7 @@ const Layout = props => {
           </nav>
           <div className="site-head-center">
             <Link className="site-head-logo" to={`/`}>
-              {title}
+              NELSON AT THE HELM
             </Link>
           </div>
           <div className="site-head-right">
