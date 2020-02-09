@@ -2,7 +2,8 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from "../components/layout"
+import Footer from "../components/Footer"
+import Header from "../components/Header"
 import SEO from "../components/seo"
 import PostCard from "../components/postCard"
 
@@ -16,32 +17,31 @@ const BlogIndex = ({ data }, location) => {
   let postCounter = 0
 
   return (
-    <div className="bg-img">
-      <Layout title={siteTitle}>
-        <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        {/* <Bio /> */}
-        {data.site.siteMetadata.description && (
-          <header className="page-head">
-            <h2 className="page-head-title">BATTLE CRY</h2>
-          </header>
-        )}
-        <div className="post-feed">
-          {posts.map(({ node }) => {
-            postCounter++
-            return (
-              <PostCard
-                key={node.fields.slug}
-                count={postCounter}
-                node={node}
-                postClass={`post`}
-              />
-            )
-          })}
-        </div>
-      </Layout>
+    <div>
+      <Header title={siteTitle} />
+      <SEO
+        title="All posts"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+      />
+      <div className="bg-img">
+        <header className="page-head">
+          <h2 className="page-head-title">BATTLE CRY</h2>
+        </header>
+      </div>
+      <div className="post-feed">
+        {posts.map(({ node }) => {
+          postCounter++
+          return (
+            <PostCard
+              key={node.fields.slug}
+              count={postCounter}
+              node={node}
+              postClass={`post`}
+            />
+          )
+        })}
+      </div>
+      <Footer />
     </div>
   )
 }

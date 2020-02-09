@@ -2,7 +2,8 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from "../components/layout"
+import CommonHeader from "../components/CommonHeader"
+import CommonFooter from "../components/CommonFooter"
 import SEO from "../components/seo"
 
 import "../utils/normalize.css"
@@ -12,9 +13,10 @@ const AboutPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
-    <Layout title={siteTitle}>
+    <>
+      <CommonHeader title={siteTitle} />
       <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-
+      <div className="h-100" />
       <article className="post-content page-template no-image">
         <div className="post-content-body">
           <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
@@ -51,7 +53,8 @@ const AboutPage = ({ data }, location) => {
           </p>
         </div>
       </article>
-    </Layout>
+      <CommonFooter title={siteTitle} />
+    </>
   )
 }
 

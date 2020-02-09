@@ -2,7 +2,8 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from "../components/layout"
+import CommonHeader from "../components/CommonHeader"
+import CommonFooter from "../components/CommonFooter"
 import SEO from "../components/seo"
 
 import "../utils/normalize.css"
@@ -12,12 +13,13 @@ const ElementsPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
-    <Layout title={siteTitle}>
+    <>
+      <CommonHeader title={siteTitle} />
       <SEO
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
-
+      <div className="h-150" />
       <article className="post-content page-template no-image">
         <div className="post-content-body">
           <p>
@@ -522,7 +524,8 @@ const ElementsPage = ({ data }, location) => {
           </div>
         </div>
       </article>
-    </Layout>
+      <CommonFooter title={siteTitle} />
+    </>
   )
 }
 
