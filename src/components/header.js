@@ -6,7 +6,7 @@ const Header = props => {
   const [toggleNav, setToggleNav] = React.useState(false)
   return (
     <header className={`site-head ${toggleNav ? `site-head-open` : ``}`}>
-      <div className="site-head-container-home">
+      <div className="site-head-container-home" id="nav">
         <a
           className="nav-burger"
           href={`#`}
