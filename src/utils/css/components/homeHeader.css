@@ -30,16 +30,15 @@
   font-size: 1.35rem;
 }
 
-.site-head-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .site-head-container-home {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.solid {
+  background-color: rgb(25, 25, 25, 0.7);
+  transition: background-color 1.5s ease 0s;
 }
 
 .site-head-container-home .site-head-left {
@@ -175,6 +174,7 @@
   /* ---------------------------------------------------------- */
 
 .nav-burger {
+  margin-left: 15%;
   display: none;
   position: absolute;
   left: 0;
@@ -256,7 +256,7 @@
     background: rgba(255, 255, 255, 1);
     transition: background 0.5s ease-out;
     transition-delay: 0.25;
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 100vh;
   }
 
@@ -274,11 +274,20 @@
 
   .site-head-open .site-head-left a,
   .site-head-open .site-head-right a {
-    opacity: 1;
-    transition: transform 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99),
+    color: black;
+    /* opacity: 1; */
+    /* transition: transform 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99),
       opacity 0.9s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transform: scale(1) translateY(0px);
+    transform: scale(1) translateY(0px); */
   }
+
+  .site-head-open .site-head-right,
+  .site-head-open .site-head-left {
+    align-self: center;
+    justify-content: center;
+    display: flex;
+  }
+
   .site-head-open .nav-current a {
     border-bottom: var(--color-base) 2px solid;
   }
