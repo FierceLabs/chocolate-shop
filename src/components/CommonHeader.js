@@ -6,7 +6,7 @@ const CommonHeader = props => {
   const [toggleNav, setToggleNav] = React.useState(false)
   return (
     <header className={`site-head ${toggleNav ? `site-head-open` : ``}`}>
-      <div className="site-head-container">
+      <div className="site-head-container" id="nav">
         <a
           className="nav-burger"
           href={`#`}
@@ -57,7 +57,7 @@ const CommonHeader = props => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Twitter
+              Youtube
             </a>
             <Link
               to={`/rss.xml`}
@@ -65,7 +65,7 @@ const CommonHeader = props => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              RSS
+              Spotify
             </Link>
           </div>
         </div>
