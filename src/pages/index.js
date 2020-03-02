@@ -2,8 +2,8 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import Footer from "../components/Footer"
-import Header from "../components/Header"
+import Footer from "../components/footer"
+import Header from "../components/header"
 import SEO from "../components/seo"
 import PostCard from "../components/postCard"
 
