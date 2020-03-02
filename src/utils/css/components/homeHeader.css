@@ -47,6 +47,10 @@
   transition: background-color 1.5s ease 0s;
 }
 
+.site-head-open .solid {
+  background-color: transparent;
+}
+
 .site-head-container-home .site-head-left {
   margin-right: 0;
 }
