@@ -186,7 +186,7 @@
 .nav-burger {
   display: none;
   position: absolute;
-  top: 0;
+  top: 50px;
   left: 50px;
   z-index: 9999;
   padding: 12px 12px 12px 0;
@@ -203,8 +203,11 @@
   }
 
   .site-head {
-    padding: 0;
+    margin-top: 0;
+    padding-top: 50px;
+    overflow: hidden;
   }
+
   .nav-burger {
     display: block;
   }
