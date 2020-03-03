@@ -42,12 +42,12 @@
   align-items: center;
 }
 
-.solid {
+.solid-menu {
   background-color: rgb(25, 25, 25, 0.7);
   transition: background-color 1.5s ease 0s;
 }
 
-.site-head-open .solid {
+.site-head-open .solid-menu {
   background-color: transparent;
 }
 

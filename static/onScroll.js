@@ -3,9 +3,9 @@ window.onscroll = event => {
   const element = document.getElementById("nav")
   const scrollTop = window.pageYOffset
   if (scrollTop > 500) {
-    element.classList.add("solid")
+    element.classList.add("solid-menu")
   } else {
-    element.classList.remove("solid")
+    element.classList.remove("solid-menu")
   }
 
   // checks if window is scrolled more than 500px, adds/removes solid class
