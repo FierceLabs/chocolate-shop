@@ -64,3 +64,28 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+// exports.onCreateWebpackConfig = ({
+//   rules,
+//   actions,
+// }) => {
+//   actions.setWebpackConfig({
+//     module: {
+//       rules: [
+//         {
+//           test: /\.css$/,
+//           exclude: /node_modules/,
+//           use: [
+//             'babel-loader',
+//             {
+//               loader: require('styled-jsx/webpack').loader,
+//               options: {
+//                 type: 'scoped'
+//               }
+//             }
+//           ]
+//         },
+//       ]
+//     }
+//   })
+// }

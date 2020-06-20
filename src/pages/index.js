@@ -3,13 +3,13 @@ import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 import Footer from "../components/footer"
-import Header from "../components/header"
+import Header from "../components/Header"
 import SEO from "../components/seo"
 import PostCard from "../components/postCard"
 
 // import "../utils/global.scss"
 import "../utils/normalize.css"
-import "../utils/css/homescreen.css"
+// import "../utils/css/homescreen.css"
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
