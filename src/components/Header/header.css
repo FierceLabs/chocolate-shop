@@ -2,12 +2,12 @@
 /* Desktop Nav Menu
 /* ---------------------------------------------------------- */
 
-.site-head {
+.h-site-head {
   background-color: var(--color-primary);
   margin-top: 0;
 }
 
-.site-head {
+.h-site-head {
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -16,38 +16,36 @@
   font-size: 1.35rem;
 }
 
-.site-head-container-home {
+.h-site-head-container-home {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background-color: var(--color-primary);
 }
 
-.site-head-open .site-head-container-home {
+.h-site-head-open .h-site-head-container-home {
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-.solid-menu {
+/* fix this js snippet */
+
+.h-solid-menu {
   background-color: rgb(25, 25, 25, 0.7);
   transition: background-color 1.5s ease 0s;
 }
 
-.site-head-open .solid-menu {
+.h-site-head-open .h-solid-menu {
   background-color: transparent;
 }
 
-.site-head-container-home .site-head-left {
-  margin-right: 0;
-}
-
-.site-head-container-home .site-head-right {
+.h-site-head-container-home .h-site-head-right {
   margin-left: 0;
   margin-right: 5%;
 }
 
-.site-head-left {
+.h-site-head-left {
   margin-right: 10rem;
   position: relative;
   justify-content: space-between;
@@ -57,26 +55,27 @@
   white-space: nowrap;
 }
 
-.nav {
+.h-nav {
   display: flex;
   margin: 0 0 0 -12px;
   padding: 0;
   list-style: none;
+  background-color: aqua;
 }
 
-.site-head li {
+.h-site-head li {
   display: block;
   margin: 0;
   padding: 0;
 }
 
-.site-head-left .nav-home-link a,
-.site-head-right .nav-home-link a {
+.h-site-head-left .h-nav-home-link a,
+.h-site-head-right .h-nav-home-link a {
   color: #fff;
 }
 
-.site-head-left a,
-.site-head-right a {
+.h-site-head-left a,
+.h-site-head-right a {
   display: block;
   margin: 0;
   padding: 10px 12px;
@@ -85,20 +84,20 @@
   opacity: 0.4;
 }
 
-.nav-current a,
-.site-head a:hover {
+.h-nav-current a,
+.h-site-head a:hover {
   text-decoration: none;
   opacity: 1;
 }
 
-.site-head-center {
+.h-site-head-center {
   position: absolute;
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.site-head-logo {
+.h-site-head-logo {
   flex-shrink: 0;
   display: block;
   padding: 10px;
@@ -110,18 +109,18 @@
   letter-spacing: 1px;
 }
 
-.site-head-logo:hover {
+.h-site-head-logo:hover {
   text-decoration: none;
 }
 
-.site-head-logo img {
+.h-site-head-logo img {
   display: block;
   margin-top: 2px;
   width: auto;
   height: 28px;
 }
 
-.site-head-right {
+.h-site-head-right {
   margin-left: 10rem;
   position: relative;
   z-index: 100;
@@ -131,46 +130,17 @@
   align-items: center;
 }
 
-.social-links {
+.h-social-links {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-}
-
-.subscribe-button {
-  display: block;
-  padding: 4px 10px;
-  border: var(--color-base) 1px solid;
-  color: var(--color-base);
-  font-size: 1.2rem;
-  line-height: 1em;
-  border-radius: 10px;
-  opacity: 0.8;
-}
-
-.subscribe-button:hover {
-  text-decoration: none;
-  opacity: 1;
-}
-
-.rss-button {
-  opacity: 0.4;
-}
-
-.rss-button:hover {
-  opacity: 1;
-}
-
-.rss-button svg {
-  margin-bottom: 1px;
-  height: 2.1rem;
-  fill: var(--color-base);
+  background-color: red;
 }
 
 /* Mobile Nav Menu
 /* ---------------------------------------------------------- */
 
-.nav-burger {
+.h-nav-burger {
   display: none;
   position: absolute;
   top: 50px;
@@ -180,17 +150,17 @@
 }
 
 @media (max-width: 850px) {
-  .site-head-container-home {
+  .h-site-head-container-home {
     height: 45px;
   }
-  .site-head-open .site-head-container-home {
+  .h-site-head-open .h-site-head-container-home {
     max-height: 50%;
     height: 100%;
   }
-  .nav-burger {
+  .h-nav-burger {
     display: block;
   }
-  .site-head-container {
+  .h-site-head-container {
     flex-direction: column;
     justify-content: flex-start;
     height: 40px;
@@ -199,12 +169,10 @@
     transition: all 0.4s ease-out;
     overflow: hidden;
   }
-  .site-head-left,
-  .site-head-right {
+  .h-site-head-right {
     display: none;
   }
-  .site-head-left a,
-  .site-head-right a {
+  .h-site-head-right a {
     margin: 8px 0;
     padding: 1px 0;
     font-size: 2.6rem;
@@ -215,52 +183,46 @@
       opacity 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: scale(1.1) translateY(-25px);
   }
-  .site-head-right a {
+  .h-site-head-right a {
     padding: 5px 0;
     margin: 1px 0;
     font-size: 2rem;
   }
-  .nav {
+  .h-nav {
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     margin: 3vw 0 0 0;
   }
-  .site-head-left {
-    order: 2;
-    margin: 0;
-    width: 100%;
-  }
-  .site-head-center {
+  .h-site-head-center {
     order: 1;
     position: static;
     z-index: auto;
     display: flex;
     justify-content: center;
   }
-  .site-head-right {
+  .h-site-head-right {
     order: 3;
     width: 100%;
     margin-top: 3vw;
   }
-  .social-links {
+  .h-social-links {
     flex-direction: column;
     align-items: flex-start;
   }
-  .site-head-open {
+  .h-site-head-open {
     background: rgba(255, 255, 255, 1);
     transition: background 0.5s ease-out;
     transition-delay: 0.25;
     overflow: hidden;
     height: 100vh;
   }
-  .site-head-open .site-head-container {
+  .h-site-head-open .h-site-head-container {
     height: 100vh;
     transition: height 0.2s ease-in;
   }
-  .site-head-open .site-head-left,
-  .site-head-open .site-head-right {
+  .h-site-head-open .h-site-head-right {
     display: flex;
     z-index: 9999;
     height: auto;
@@ -269,27 +231,27 @@
     justify-content: center;
     flex-direction: column;
   }
-  .site-head-open .site-head-left .nav {
+  /* Do we need this? */
+  .h-site-head-open .h-site-head-left .h-nav {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
   }
-  .site-head-open .site-head-left a,
-  .site-head-open .site-head-right a {
+  .h-site-head-open .h-site-head-right a {
     color: black;
     opacity: 1;
     transition: transform 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99),
       opacity 0.9s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: scale(1) translateY(0px);
   }
-  .site-head-open .nav-current a {
+  .h-site-head-open .h-nav-current a {
     border-bottom: var(--color-base) 2px solid;
   }
-  .site-head-open .site-head-right a {
+  .h-site-head-open .h-site-head-right a {
     opacity: 0.5;
   }
-  .site-head-open {
+  .h-site-head-open {
     display: block;
     position: fixed;
     z-index: 9999;
