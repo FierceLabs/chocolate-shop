@@ -4,10 +4,7 @@
 
 .h-site-head {
   width: 100%;
-  position: fixed;
   z-index: 1;
-  margin-top: 50px;
-  margin-bottom: 50px;
   font-size: 1.35rem;
 }
 
@@ -21,44 +18,25 @@
   .h-site-head-container-home {
     justify-content: center;
   }
+  .h-site-head {
+    position: fixed;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 @media (min-width: 1098px) {
   .h-site-head-container-home {
     justify-content: flex-end;
   }
+  .h-site-head-right {
+    margin-right: 5%;
+  }
 }
 
-.h-solid-menu {
-  background-color: rgb(25, 25, 25, 0.7);
+.h-site-head-container-home.fixed {
+  background-color: var(--color-off-black);
   transition: background-color 1.5s ease 0s;
-}
-
-.h-site-head-open .h-solid-menu {
-  background-color: transparent;
-}
-
-.h-site-head-container-home .h-site-head-right {
-  margin-left: 0;
-  margin-right: 5%;
-}
-
-.h-site-head-left {
-  margin-right: 10rem;
-  position: relative;
-  justify-content: space-between;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.h-nav {
-  display: flex;
-  margin: 0 0 0 -12px;
-  padding: 0;
-  list-style: none;
-  background-color: aqua;
 }
 
 .h-site-head li {
@@ -67,32 +45,23 @@
   padding: 0;
 }
 
-.h-site-head-left .h-nav-home-link a,
-.h-site-head-right .h-nav-home-link a {
-  color: #fff;
-}
-
-.h-site-head-left a,
 .h-site-head-right a {
   display: block;
   margin: 0;
   padding: 10px 12px;
-  color: var(--color-base);
+  color: var(--color-bg);
   font-weight: 600;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
-.h-nav-current a,
+.h-site-head-right .h-active,
 .h-site-head a:hover {
   text-decoration: none;
   opacity: 1;
 }
 
 .h-site-head-right {
-  margin-left: 10rem;
-  position: relative;
   z-index: 100;
-  flex-shrink: 0;
   display: none;
   justify-content: space-between;
   align-items: center;
@@ -113,13 +82,13 @@
   position: absolute;
   top: 45px;
   height: 300px;
-  width: 80vw;
+  width: 70vw;
   background-color: transparent;
 }
 
 @media (min-width: 475px) {
   .h-mobile-menu {
-    width: 65vw;
+    width: 58vw;
   }
 }
 
@@ -133,7 +102,7 @@
 }
 
 .h-mobile-menu.open {
-  background-color: #fff;
+  background-color: var(--color-bg);
   animation: appear 0.8s ease-in-out;
 }
 
@@ -156,7 +125,12 @@
 
 .h-mobile-links > a {
   font-size: 2rem;
-  color: #3b3b3b;
+  color: var(--color-off-black);
   font-family: var(--font-sans-serif);
   font-weight: var(--font-light);
+}
+
+.h-mobile-links .h-active,
+.h-mobile-links a:hover {
+  font-weight: var(--font-bold);
 }

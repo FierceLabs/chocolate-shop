@@ -20,15 +20,15 @@ const BlogIndex = ({ data }, location) => {
 
   return (
     <div>
-      <Header title={siteTitle} />
       <SEO
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       <div className="bg-img">
-        <header className="page-head">
+        <Header title={siteTitle} />
+        {/* <header className="page-head">
           <h2 className="page-head-title">BATTLE CRY</h2>
-        </header>
+        </header> */}
       </div>
       <div className="post-feed">
         {posts.map(({ node }) => {

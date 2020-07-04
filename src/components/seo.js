@@ -77,9 +77,7 @@ function SEO({ description, lang, meta, keywords, title, script }) {
             : []
         )
         .concat(meta)}
-    >
-      <script src={"/onScroll.js"} />
-    </Helmet>
+    ></Helmet>
   )
 }
 
