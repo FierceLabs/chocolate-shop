@@ -1,11 +1,11 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
-
 import Footer from "../components/footer"
 import Header from "../components/Header"
 import SEO from "../components/seo"
 import PostCard from "../components/postCard"
+import { handleStyles } from "../lib/accessibility"
 
 // import "../utils/global.scss"
 // import "../utils/normalize.css"
@@ -15,6 +15,8 @@ const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
   let postCounter = 0
+
+  useEffect(() => handleStyles(), [])
 
   return (
     <div>

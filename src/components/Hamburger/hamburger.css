@@ -1,0 +1,81 @@
+button {
+  color: transparent;
+  box-shadow: none;
+}
+
+button:hover {
+  box-shadow: none;
+}
+
+.ham-nav-burger {
+  display: block;
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+  cursor: pointer;
+  left: 10%;
+}
+
+@media (min-width: 475px) {
+  .ham-nav-burger {
+    left: 17%;
+  }
+}
+
+.ham-hamburger-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 60px;
+  transition: all 0.4s ease-in-out;
+}
+
+.ham-hamburger-inner,
+.ham-hamburger-inner::before,
+.ham-hamburger-inner::after {
+  width: 40px;
+  height: 1px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+}
+
+.ham-hamburger-inner::before,
+.ham-hamburger-inner::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+}
+
+.ham-hamburger-inner::before {
+  transform: translateY(-16px);
+}
+
+.ham-hamburger-inner::after {
+  transform: translateY(16px);
+}
+
+/* ANIMATION */
+
+.ham-hamburger-box.open .ham-hamburger-inner {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.ham-hamburger-box.open .ham-hamburger-inner::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background-color: #000;
+}
+
+.ham-hamburger-box.open .ham-hamburger-inner::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background-color: #000;
+}
+
+@media (min-width: 851px) {
+  .ham-nav-burger {
+    display: none;
+  }
+}
