@@ -43,6 +43,9 @@
   "devDependencies": {
     "autoprefixer": "^9.8.1",
     "babel-preset-gatsby": "^0.4.10",
+    "eslint": "^7.4.0",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.5",
     "husky": "^2.2.0",
     "postcss-color-function": "^4.1.0",
     "postcss-custom-properties": "^8.0.10",

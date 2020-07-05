@@ -1,5 +1,5 @@
 // component className type = h
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 import { Link } from "gatsby"
 import Hamburger from "../Hamburger"
 import "./header.css"
@@ -8,19 +8,20 @@ const Header = props => {
   const [toggleNav, setToggleNav] = useState(false)
   const [fixed, setFixed] = useState("")
 
-  useEffect(() => {
-    const handleScroll = e => {
-      if (window.pageYOffset > 600) {
-        setFixed("fixed")
-      } else {
-        setFixed("")
-      }
+  const handleScroll = useCallback(e => {
+    if (window.pageYOffset > 600) {
+      setFixed("fixed")
+    } else {
+      setFixed("")
     }
+  }, [])
+
+  useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", handleScroll)
     }
-    // return window.removeEventListener('scroll', handleScroll)
-  }, [])
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [handleScroll])
 
   const open = toggleNav ? "open" : ""
   const toggleHamburger = () => {

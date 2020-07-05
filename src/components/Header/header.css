@@ -82,14 +82,8 @@
   position: absolute;
   top: 45px;
   height: 300px;
-  width: 70vw;
+  width: 58vw;
   background-color: transparent;
-}
-
-@media (min-width: 475px) {
-  .h-mobile-menu {
-    width: 58vw;
-  }
 }
 
 @media (min-width: 851px) {

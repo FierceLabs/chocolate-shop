@@ -13,13 +13,7 @@ button:hover {
   margin-top: 50px;
   z-index: 2;
   cursor: pointer;
-  margin-left: -45%;
-}
-
-@media (min-width: 475px) {
-  .ham-nav-burger {
-    left: 17%;
-  }
+  margin-left: -52%;
 }
 
 .ham-hamburger-box {
