@@ -6,6 +6,7 @@ import Menu from "../components/Menu"
 import SEO from "../components/seo"
 import PostCard from "../components/postCard"
 import { handleStyles } from "../lib/accessibility"
+import { Logo } from "../components/Icons"
 
 // import "../utils/global.scss"
 import "../utils/normalize.css"
@@ -25,7 +26,24 @@ const BlogIndex = ({ data }, location) => {
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       <div className="bg-img">
-        <Menu />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "coulmn",
+            justifyContent: "center",
+          }}
+        >
+          <Menu />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            marginTop: "200px",
+            justifyContent: "center",
+          }}
+        >
+          <Logo />
+        </div>
         {/* <header className="page-head">
           <h2 className="page-head-title">BATTLE CRY</h2>
         </header> */}

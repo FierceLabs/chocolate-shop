@@ -6,7 +6,7 @@
   width: 100vw;
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .bg-img::after {
