@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useCallback } from "react"
 import { Link } from "gatsby"
 import Hamburger from "../Hamburger"
+import PropTypes from "prop-types"
 import "./styles.css"
 
 const Menu = () => {
