@@ -1,32 +1,10 @@
 // component className type = ham
 import React, { useState, useEffect } from "react"
-import "./hamburger.css"
+import PropTypes from "prop-types"
+import "./styles.css"
 
 const Hamburger = ({ toggleHamburger, toggleState }) => {
   const open = toggleState ? "open" : "closed"
-  // const disableScroll = () => {
-  //     if (typeof window !== 'undefined') {
-  //         const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-  //         const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft
-  //         // if any scroll is attempted, set this to the previous value
-  //         window.onscroll = function () {
-  //             window.scrollTo(scrollLeft, scrollTop)
-  //         }
-  //     }
-  // }
-  // const enableScroll = () => {
-  //     if (typeof window !== 'undefined') {
-  //         window.onscroll = function () { }
-  //     }
-  // }
-
-  // const handleDisableScroll = () => {
-  //     if (!toggleState) {
-  //         disableScroll()
-  //     } else {
-  //         enableScroll()
-  //     }
-  // }
   return (
     <button
       className="ham-nav-burger"
@@ -42,6 +20,11 @@ const Hamburger = ({ toggleHamburger, toggleState }) => {
       </div>
     </button>
   )
+}
+
+Hamburger.propTypes = {
+  toggleHamburger: PropTypes.func.isRequired,
+  toggleState: PropTypes.bool.isRequired,
 }
 
 export default Hamburger

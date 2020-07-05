@@ -2,9 +2,9 @@
 import React, { useState, useEffect, useCallback } from "react"
 import { Link } from "gatsby"
 import Hamburger from "../Hamburger"
-import "./header.css"
+import "./styles.css"
 
-const Header = props => {
+const Menu = () => {
   const [toggleNav, setToggleNav] = useState(false)
   const [fixed, setFixed] = useState("")
 
@@ -70,8 +70,14 @@ const Header = props => {
       </div>
     )
   }
+
+  Links.propTypes = {
+    className: PropTypes.string.isRequired,
+    current: PropTypes.string.isRequired,
+  }
+
   return (
-    <header className={`h-site-head ${toggleNav ? `h-site-head-open` : ``}`}>
+    <nav className={`h-site-head ${toggleNav ? `h-site-head-open` : ``}`}>
       <div className={`h-site-head-container-home ${fixed}`}>
         <Hamburger toggleHamburger={toggleHamburger} toggleState={toggleNav} />
         {toggleNav && (
@@ -83,8 +89,8 @@ const Header = props => {
           <Links className="h-nav-home-link h-social-links" current="home" />
         </div>
       </div>
-    </header>
+    </nav>
   )
 }
 
-export default Header
+export default Menu
