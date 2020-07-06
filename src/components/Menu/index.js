@@ -1,4 +1,5 @@
 // component className type = h
+// TODO: Maybe make the links an array of props
 import React, { useState, useEffect, useCallback } from "react"
 import { Link } from "gatsby"
 import Hamburger from "../Hamburger"
@@ -10,7 +11,7 @@ const Menu = () => {
   const [fixed, setFixed] = useState("")
 
   const handleScroll = useCallback(e => {
-    if (window.pageYOffset > 600) {
+    if (window.pageYOffset > 20) {
       setFixed("fixed")
     } else {
       setFixed("")

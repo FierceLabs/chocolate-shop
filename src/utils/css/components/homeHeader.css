@@ -1,25 +1,11 @@
 /* Site Navigation
 /* ---------------------------------------------------------- */
 
-@import "../../utils/css/vars.css";
-.logo-container {
-  display: flex;
-  /* If you change the --menu-margin-top, then the 90px must change accordingly */
-  margin-top: calc(100vh / 2 - var(--logo-header-size) / 2 - 90px);
-  justify-content: center;
+.site-foot {
+  display: block;
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transform: translateY(-4vw);
 }
-
-@media (min-width: 980px) {
-  .logo-container {
-    margin-top: calc(100vh / 2 - var(--logo-header-size) / 2);
-  }
-}
-
-/* .site-foot {
-    display: block;
-    position: fixed;
-    z-index: 9999;
-    bottom: 0;
-    transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transform: translateY(-4vw);
-  } */

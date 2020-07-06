@@ -1,13 +1,18 @@
 @import "../../utils/css/vars.css";
 .logo-container {
   display: flex;
+  flex-direction: column;
   /* If you change the --menu-margin-top, then the 90px must change accordingly */
-  margin-top: calc(100vh / 2 - var(--logo-header-size) / 2 - 90px);
+  margin-top: calc(
+    100vh / 2 - (var(--logo-header-size) + var(--signature-header-size)) / 2 -
+      90px
+  );
   justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 980px) {
   .logo-container {
-    margin-top: calc(100vh / 2 - var(--logo-header-size) / 2);
+    margin: auto;
   }
 }

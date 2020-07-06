@@ -8,7 +8,7 @@ import Menu from "../components/Menu"
 import SEO from "../components/seo"
 import PostCard from "../components/postCard"
 import { handleStyles } from "../lib/accessibility"
-import { Logo } from "../components/Icons"
+import { Logo, Signature } from "../components/Icons"
 
 // import "../utils/global.scss"
 import "../utils/normalize.css"
@@ -31,10 +31,10 @@ const BlogIndex = ({ data }, location) => {
         <Menu />
         <LogoHero>
           <Logo />
+          <div className="mt-10">
+            <Signature />
+          </div>
         </LogoHero>
-        {/* <header className="page-head">
-          <h2 className="page-head-title">BATTLE CRY</h2>
-        </header> */}
       </Header>
       <div className="post-feed">
         {posts.map(({ node }) => {

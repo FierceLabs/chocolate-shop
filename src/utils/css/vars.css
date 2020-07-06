@@ -35,6 +35,17 @@
   --logo-header-size: 200px;
   --menu-margin-top: 50px;
   --menu-margin-bottom: 50px;
+  --signature-header-size: 50px;
   /* z-indexes */
   --bg-index: -1;
+}
+
+/* classNames */
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
 }
