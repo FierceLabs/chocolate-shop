@@ -28,4 +28,13 @@
   --height: 4rem;
   --margin: 2rem;
   --radius: 0.5rem;
+  /* image paths */
+  --header-image: url("../../../content/assets/darkSea.jpg");
+  /* Specific Component Sizes */
+  /* Caution: When changing these values, you must re-assess the LogoHero styles */
+  --logo-header-size: 200px;
+  --menu-margin-top: 50px;
+  --menu-margin-bottom: 50px;
+  /* z-indexes */
+  --bg-index: -1;
 }

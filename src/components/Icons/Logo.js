@@ -225,8 +225,8 @@ Logo.propTypes = {
 }
 
 Logo.defaultProps = {
-  width: 200,
-  height: "auto",
+  height: customProperties["--logo-header-size"],
+  width: "auto",
   fill: customProperties["--color-transparent-bg"],
   title: "Logo",
   className: "",

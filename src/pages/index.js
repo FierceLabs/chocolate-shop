@@ -2,6 +2,8 @@ import React, { useEffect } from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Footer from "../components/footer"
+import Header from "../components/Header"
+import LogoHero from "../components/LogoHero"
 import Menu from "../components/Menu"
 import SEO from "../components/seo"
 import PostCard from "../components/postCard"
@@ -25,29 +27,15 @@ const BlogIndex = ({ data }, location) => {
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
-      <div className="bg-img">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "coulmn",
-            justifyContent: "center",
-          }}
-        >
-          <Menu />
-        </div>
-        <div
-          style={{
-            display: "flex",
-            marginTop: "200px",
-            justifyContent: "center",
-          }}
-        >
+      <Header>
+        <Menu />
+        <LogoHero>
           <Logo />
-        </div>
+        </LogoHero>
         {/* <header className="page-head">
           <h2 className="page-head-title">BATTLE CRY</h2>
         </header> */}
-      </div>
+      </Header>
       <div className="post-feed">
         {posts.map(({ node }) => {
           postCounter++

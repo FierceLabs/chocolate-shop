@@ -13,5 +13,6 @@ module.exports = {
     "--color-bg": "#f8f8f8",
     "--color-transparent-bg": "rgb(248, 248, 248, 0.6)",
     "--color-off-black": "rgb(25, 25, 25, 0.7)",
+    "--logo-header-size": "200px",
   },
 }

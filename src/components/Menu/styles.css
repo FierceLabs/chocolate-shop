@@ -14,18 +14,18 @@
   justify-content: center;
 }
 
-@media (min-width: 851px) {
+@media (min-width: 980px) {
   .h-site-head-container-home {
     justify-content: center;
   }
   .h-site-head {
     position: fixed;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: var(--menu-margin-top);
+    margin-bottom: var(--menu-margin-bottom);
   }
 }
 
-@media (min-width: 1098px) {
+@media (min-width: 1280px) {
   .h-site-head-container-home {
     justify-content: flex-end;
   }
@@ -86,7 +86,7 @@
   background-color: transparent;
 }
 
-@media (min-width: 851px) {
+@media (min-width: 980px) {
   .h-mobile-menu {
     display: none;
   }

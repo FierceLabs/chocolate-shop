@@ -10,7 +10,7 @@ button:hover {
 
 .ham-nav-burger {
   display: block;
-  margin-top: 50px;
+  margin-top: var(--menu-margin-top);
   z-index: 2;
   cursor: pointer;
   margin-left: -52%;
@@ -68,7 +68,7 @@ button:hover {
   background-color: var(--color-off-black);
 }
 
-@media (min-width: 851px) {
+@media (min-width: 980px) {
   .ham-nav-burger {
     display: none;
   }
