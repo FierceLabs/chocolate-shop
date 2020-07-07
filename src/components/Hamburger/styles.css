@@ -1,7 +1,7 @@
 @import "../../utils/css/vars.css";
 button {
-  color: transparent;
-  box-shadow: none;
+  color: transparent !important;
+  box-shadow: none !important;
 }
 
 button:hover {
