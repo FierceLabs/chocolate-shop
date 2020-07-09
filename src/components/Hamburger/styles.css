@@ -1,7 +1,7 @@
 @import "../../utils/css/vars.css";
-button {
-  color: transparent !important;
-  box-shadow: none !important;
+button.ham-nav-burger {
+  color: transparent;
+  box-shadow: none;
 }
 
 button:hover {
