@@ -1,10 +1,9 @@
 @import "../../utils/css/vars.css";
 button.ham-nav-burger {
-  color: transparent;
   box-shadow: none;
 }
 
-button:hover {
+button.ham-nav-burger:hover {
   box-shadow: none;
 }
 
