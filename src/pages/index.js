@@ -10,6 +10,7 @@ import PostFeed from "../components/PostFeed"
 import PostCard from "../components/PostCard"
 import { handleStyles } from "../lib/accessibility"
 import { Logo, Signature } from "../components/Icons"
+import Heading from "../components/Heading"
 
 // import "../utils/global.scss"
 import "../utils/normalize.css"
@@ -37,7 +38,10 @@ const BlogIndex = ({ data }, location) => {
           </div>
         </LogoHero>
       </Header>
-      <div>fjfsdjfdsjfdsfdsfdfdsfds</div>
+      <Heading
+        title="We are the dreamers"
+        description="Album released in stores soon. Hear it here first!"
+      />
       <PostFeed posts={posts} />
       <Footer />
     </div>
