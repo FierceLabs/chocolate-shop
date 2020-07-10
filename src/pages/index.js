@@ -6,7 +6,8 @@ import Header from "../components/Header"
 import LogoHero from "../components/LogoHero"
 import Menu from "../components/Menu"
 import SEO from "../components/seo"
-import PostCard from "../components/postCard"
+import PostFeed from "../components/PostFeed"
+import PostCard from "../components/PostCard"
 import { handleStyles } from "../lib/accessibility"
 import { Logo, Signature } from "../components/Icons"
 
@@ -36,19 +37,8 @@ const BlogIndex = ({ data }, location) => {
           </div>
         </LogoHero>
       </Header>
-      <div className="post-feed">
-        {posts.map(({ node }) => {
-          postCounter++
-          return (
-            <PostCard
-              key={node.fields.slug}
-              count={postCounter}
-              node={node}
-              postClass={`post`}
-            />
-          )
-        })}
-      </div>
+      <div>fjfsdjfdsjfdsfdsfdfdsfds</div>
+      <PostFeed posts={posts} />
       <Footer />
     </div>
   )

@@ -17,7 +17,7 @@ const AboutPage = ({ data }, location) => {
       <CommonHeader title={siteTitle} />
       <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <div className="h-100" />
-      <article className="post-content page-template no-image">
+      <article className="pc-post-content page-template pc-no-image">
         <div className="post-content-body">
           <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
             Clean, minimal, and deeply customisable. London is a theme made for

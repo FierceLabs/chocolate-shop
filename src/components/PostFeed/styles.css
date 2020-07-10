@@ -1,0 +1,4 @@
+.pf-post-feed {
+  display: flex;
+  flex-wrap: wrap;
+}
