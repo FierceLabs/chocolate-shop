@@ -10,7 +10,7 @@ import PostFeed from "../components/PostFeed"
 import PostCard from "../components/PostCard"
 import { handleStyles } from "../lib/accessibility"
 import { Logo, Signature } from "../components/Icons"
-import Heading from "../components/Heading"
+import Marquee from "../components/Marquee"
 
 // import "../utils/global.scss"
 import "../utils/normalize.css"
@@ -38,10 +38,7 @@ const BlogIndex = ({ data }, location) => {
           </div>
         </LogoHero>
       </Header>
-      <Heading
-        title="We are the dreamers"
-        description="Album released in stores soon. Hear it here first!"
-      />
+      <Marquee image={data.face.childImageSharp.fluid} />
       <PostFeed posts={posts} />
       <Footer />
     </div>
@@ -75,6 +72,13 @@ const indexQuery = graphql`
               }
             }
           }
+        }
+      }
+    }
+    face: file(relativePath: { eq: "face.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1360) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

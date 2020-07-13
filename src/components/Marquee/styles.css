@@ -1,0 +1,27 @@
+.mar-marquee {
+  position: relative;
+}
+
+.mar-width-full {
+  position: relative;
+  width: 100vw;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.mar-text {
+  font-size: 18px;
+  color: var(--color-transparent-bg);
+  font-family: var(--font-sans-serif);
+  font-weight: 600;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 980px) {
+  .mar-text {
+    font-size: 30px;
+  }
+}
