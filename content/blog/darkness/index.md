@@ -1,6 +1,6 @@
 ---
-title: Darkness
-date: "2019-05-08"
+title: "Playing For Keeps"
+date: "2020-05-08"
 thumbnail: ./bbbb.jpg
 description: Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.
 ---
