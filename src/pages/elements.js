@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import CommonHeader from "../components/CommonHeader"
+import CommonHeader from "../components/Layout/CommonHeader"
 import CommonFooter from "../components/CommonFooter"
 import SEO from "../components/seo"
 

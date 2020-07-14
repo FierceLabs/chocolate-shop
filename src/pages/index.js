@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import Footer from "../components/footer"
+import Footer from "../components/Footer"
 import Header from "../components/Header"
 import LogoHero from "../components/LogoHero"
 import Menu from "../components/Menu"
@@ -40,7 +40,7 @@ const BlogIndex = ({ data }, location) => {
       </Header>
       <Marquee image={data.face.childImageSharp.fluid} />
       <PostFeed posts={posts} />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

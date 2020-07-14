@@ -1,48 +1,45 @@
+// component class = ch
 import React from "react"
 import { Link } from "gatsby"
+import PropTypes from "prop-types"
 
 const CommonHeader = props => {
-  const { title, children } = props
-  const [toggleNav, setToggleNav] = React.useState(false)
+  const { title, handleClick } = props
   return (
-    <header className={`site-head ${toggleNav ? `site-head-open` : ``}`}>
-      <div className="site-head-container" id="nav">
-        <a
-          className="nav-burger"
-          href={`#`}
-          onClick={() => setToggleNav(!toggleNav)}
-        >
+    <header className="ch-site-head">
+      <div className="ch-site-head-container">
+        <a className="ch-nav-burger" href={`#`} onClick={() => handleClick()}>
           <div
-            className="hamburger hamburger--collapse"
+            className="ch-hamburger ch-hamburger--collapse"
             aria-label="Menu"
             role="button"
             aria-controls="navigation"
           >
-            <div className="hamburger-box">
-              <div className="hamburger-inner" />
+            <div className="ch-hamburger-box">
+              <div className="ch-hamburger-inner" />
             </div>
           </div>
         </a>
-        <nav id="swup" class="site-head-left">
-          <ul className="nav" role="menu">
-            <li className="nav-home nav-current" role="menuitem">
+        <nav id="swup" className="ch-site-head-left">
+          <ul className="ch-nav" role="menu">
+            <li className="ch-nav-home ch-nav-current" role="menuitem">
               <Link to={`/`}>Home</Link>
             </li>
-            <li className="nav-about" role="menuitem">
+            <li className="ch-nav-about" role="menuitem">
               <Link to={`/about`}>About</Link>
             </li>
-            <li className="nav-elements" role="menuitem">
+            <li className="ch-nav-elements" role="menuitem">
               <Link to={`/elements`}>Elements</Link>
             </li>
           </ul>
         </nav>
-        <div className="site-head-center">
-          <Link className="site-head-logo" to={`/`}>
-            NELSON AT THE HELM
+        <div className="ch-site-head-center">
+          <Link className="ch-site-head-logo" to={`/`}>
+            {title}
           </Link>
         </div>
-        <div className="site-head-right">
-          <div className="social-links">
+        <div className="ch-site-head-right">
+          <div className="ch-social-links">
             <a
               href="https://www.facebook.com"
               title="Facebook"
@@ -57,7 +54,7 @@ const CommonHeader = props => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Youtube
+              Twitter
             </a>
             <Link
               to={`/rss.xml`}
@@ -65,13 +62,18 @@ const CommonHeader = props => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Spotify
+              RSS
             </Link>
           </div>
         </div>
       </div>
     </header>
   )
+}
+
+CommonHeader.propTypes = {
+  title: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
 }
 
 export default CommonHeader

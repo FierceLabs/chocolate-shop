@@ -1,0 +1,10 @@
+.f-site-foot {
+  margin: 3vw 0 1vw;
+  text-align: center;
+  color: color(var(--color-border) l(-20%));
+  font-size: 1.4rem;
+}
+
+.f-site-foot a {
+  color: var(--color-base);
+}
