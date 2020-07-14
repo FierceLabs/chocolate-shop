@@ -14,7 +14,7 @@
     "gatsby-plugin-google-analytics": "^2.3.4",
     "gatsby-plugin-manifest": "^2.4.12",
     "gatsby-plugin-netlify": "^2.3.5",
-    "gatsby-plugin-offline": "^2.1.0",
+    "gatsby-plugin-offline": "^2.2.10",
     "gatsby-plugin-postcss": "^2.3.4",
     "gatsby-plugin-purgecss": "^3.1.1",
     "gatsby-plugin-react-helmet": "^3.3.4",
@@ -38,7 +38,7 @@
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
     "typeface-nunito": "^0.0.72",
-    "url-join": "^4.0.0"
+    "url-join": "^4.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.1",
@@ -46,13 +46,13 @@
     "eslint": "^7.4.0",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.5",
-    "husky": "^2.2.0",
+    "husky": "^2.7.0",
     "postcss-color-function": "^4.1.0",
-    "postcss-custom-properties": "^8.0.10",
+    "postcss-custom-properties": "^8.0.11",
     "postcss-easy-import": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^1.17.0",
-    "pretty-quick": "^1.10.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^1.11.1",
     "prop-types": "^15.7.2",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0"
