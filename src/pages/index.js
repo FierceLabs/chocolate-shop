@@ -40,7 +40,7 @@ const BlogIndex = ({ data }, location) => {
       </Header>
       <Marquee image={data.face.childImageSharp.fluid} />
       <PostFeed posts={posts} />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
