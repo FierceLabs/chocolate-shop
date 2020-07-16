@@ -1,0 +1,5 @@
+.rhap_volume-container > button,
+.rhap_main-controls > button,
+.rhap_additional-controls > button {
+  box-shadow: none !important;
+}

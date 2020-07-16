@@ -5,6 +5,10 @@ import Img from "gatsby-image"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
+import AudioPlayer from "react-h5-audio-player"
+import "react-h5-audio-player/lib/styles.css"
+import "./styles.css"
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -37,6 +41,13 @@ class BlogPostTemplate extends React.Component {
               />
             </div>
           )}
+
+          {/* {post.frontmatter.audio && ( */}
+          <AudioPlayer
+            src="/content/blog/darkness/Prisoners_Master.mp3"
+            layout="stacked-reverse"
+          />
+          {/* )} */}
 
           <div
             className="post-content-body"
