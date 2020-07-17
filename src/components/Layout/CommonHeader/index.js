@@ -29,7 +29,7 @@ const CommonHeader = props => {
               <Link to={`/about`}>About</Link>
             </li>
             <li className="ch-nav-elements" role="menuitem">
-              <Link to={`/elements`}>Elements</Link>
+              <Link to={`/contact`}>Contact Us</Link>
             </li>
           </ul>
         </nav>

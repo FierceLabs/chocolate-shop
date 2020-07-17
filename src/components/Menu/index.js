@@ -40,10 +40,10 @@ const Menu = () => {
           About
         </Link>
         <Link
-          className={current === "elements" ? "h-active" : ""}
-          to={`/elements`}
+          className={current === "contact" ? "h-active" : ""}
+          to={`/contact`}
         >
-          Elements
+          Contact Us
         </Link>
         <a
           href="https://www.facebook.com"
