@@ -30,6 +30,7 @@ const ContactPage = ({ data }, location) => {
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
+            action="/src/pages/success.js"
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="row gtr-uniform">
