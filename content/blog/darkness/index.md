@@ -1,8 +1,8 @@
 ---
-title: "Playing For Keeps"
-date: "2020-05-08"
+title: "The Longest Kiss"
+date: "2020-07-17"
 thumbnail: ./bbbb.jpg
-audio: ./the_longest_kiss
+audio: "https://nelson-at-the-helm.s3-us-west-2.amazonaws.com/The+Longest+Kiss.mp3"
 description: Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.
 ---
 

@@ -7,7 +7,7 @@ module.exports = {
     "--xsmall": "480px",
   },
   customProperties: {
-    "--color-primary": "#3eb0ef",
+    "--color-primary": "#dba321",
     "--color-base": "#131313",
     "--color-border": "#ddd",
     "--color-bg": "#f8f8f8",

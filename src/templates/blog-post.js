@@ -42,12 +42,12 @@ class BlogPostTemplate extends React.Component {
             </div>
           )}
 
-          {/* {post.frontmatter.audio && ( */}
-          <AudioPlayer
-            src="/content/blog/darkness/Prisoners_Master.mp3"
-            layout="stacked-reverse"
-          />
-          {/* )} */}
+          {post.frontmatter.audio && (
+            <AudioPlayer
+              src={post.frontmatter.audio}
+              layout="stacked-reverse"
+            />
+          )}
 
           <div
             className="post-content-body"
@@ -84,6 +84,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        audio
         thumbnail {
           childImageSharp {
             fluid(maxWidth: 1360) {
