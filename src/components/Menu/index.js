@@ -45,6 +45,12 @@ const Menu = () => {
         >
           Contact Us
         </Link>
+        <Link
+          className={current === "contact" ? "h-active" : ""}
+          to={`/listen`}
+        >
+          Listen
+        </Link>
         <a
           href="https://www.facebook.com"
           title="Facebook"

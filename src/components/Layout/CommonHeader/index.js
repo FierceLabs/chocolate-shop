@@ -25,6 +25,23 @@ const CommonHeader = props => {
             <li className="ch-nav-home ch-nav-current" role="menuitem">
               <Link to={`/`}>Home</Link>
             </li>
+            <li className="ch-nav-elements" role="menuitem">
+              <div className="ch-dropdown">
+                <Link to={`/listen`}>Listen</Link>
+                <div className="ch-dropdown-content">
+                  <a href="#">Playing For Keeps</a>
+                  <a href="#">The Longest Kiss</a>
+                  <a href="#">Battle Cry</a>
+                  <a href="#">Hey Girl</a>
+                  <a href="#">All These Dreams</a>
+                  <a href="#">Prisoners</a>
+                  <a href="#">Mechanical</a>
+                  <a href="#">The Haunting</a>
+                  <a href="#">All These Dreams Acoustic</a>
+                  <a href="#">T-Shirts</a>
+                </div>
+              </div>
+            </li>
             <li className="ch-nav-about" role="menuitem">
               <Link to={`/about`}>About</Link>
             </li>

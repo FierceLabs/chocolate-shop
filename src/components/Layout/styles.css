@@ -9,12 +9,13 @@
 @import "../../utils/css/components/forms.css";
 @import "../../utils/css/components/buttons.css";
 @import "../../utils/css/components/actions.css";
-
 /* Layout ----------------------------------------------------*/
+
 .ch-site-wrapper {
   padding: 3vw;
   min-height: 100vh;
 }
+
 @media (max-width: 850px) {
   .ch-site-wrapper {
     padding: 6vw;
@@ -199,7 +200,6 @@
     flex-direction: column;
     align-items: flex-start;
   }
-
   .ch-site-head-open {
     background: rgba(255, 255, 255, 1);
     transition: background 0.5s ease-out;
@@ -207,19 +207,16 @@
     overflow: hidden;
     height: 100vh;
   }
-
   .ch-site-head-open .ch-site-head-container {
     height: 100vh;
     transition: height 0.2s ease-in;
   }
-
   .ch-site-head-open .ch-site-head-left,
   .ch-site-head-open .ch-site-head-right {
     z-index: 9999;
     height: auto;
     transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   }
-
   .ch-site-head-open .ch-site-head-left a,
   .ch-site-head-open .ch-site-head-right a {
     opacity: 1;
@@ -246,6 +243,7 @@
 /* More Burger ------------------------------------------*/
 
 /* https://github.com/jonsuh/hamburgers */
+
 .ch-hamburger {
   display: flex;
   overflow: visible;
@@ -283,14 +281,17 @@
   border-radius: 4px;
   transition: transform 0.15s ease;
 }
+
 .ch-hamburger-inner::before,
 .ch-hamburger-inner::after {
   content: "";
   display: block;
 }
+
 .ch-hamburger-inner::before {
   top: -6px;
 }
+
 .ch-hamburger-inner::after {
   bottom: -12px;
 }
@@ -298,6 +299,7 @@
 /*
   * Collapse
   */
+
 .ch-hamburger--collapse .ch-hamburger-inner {
   top: auto;
   bottom: 0;
@@ -305,11 +307,13 @@
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition-duration: 0.15s;
 }
+
 .ch-hamburger--collapse .ch-hamburger-inner::after {
   top: -12px;
   transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
     opacity 0.1s linear;
 }
+
 .ch-hamburger--collapse .ch-hamburger-inner::before {
   transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
     transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -333,9 +337,37 @@
   transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
     opacity 0.1s 0.27s linear;
 }
+
 .ch-site-head-open .ch-hamburger-inner::before {
   top: 0;
   transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
     transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
   transform: rotate(-90deg);
+}
+
+/* Dropdown Menu */
+
+.ch-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.ch-dropdown-content {
+  display: none;
+  position: absolute;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1); */
+  z-index: 1;
+  border-left: 1px grey solid;
+  background-color: rgb(248, 248, 248);
+}
+
+.ch-dropdown-content a {
+  opacity: 0.7;
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.ch-dropdown:hover .ch-dropdown-content {
+  display: block;
 }
