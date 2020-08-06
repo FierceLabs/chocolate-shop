@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -53,6 +54,7 @@ exports.createPages = ({ graphql, actions }) => {
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
+  fmImagesToRelative(node)
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
@@ -64,28 +66,3 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
-
-// exports.onCreateWebpackConfig = ({
-//   rules,
-//   actions,
-// }) => {
-//   actions.setWebpackConfig({
-//     module: {
-//       rules: [
-//         {
-//           test: /\.css$/,
-//           exclude: /node_modules/,
-//           use: [
-//             'babel-loader',
-//             {
-//               loader: require('styled-jsx/webpack').loader,
-//               options: {
-//                 type: 'scoped'
-//               }
-//             }
-//           ]
-//         },
-//       ]
-//     }
-//   })
-// }

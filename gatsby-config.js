@@ -15,8 +15,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/_posts/blog`,
-        name: `blog`,
+        path: `${__dirname}/content/assets/uploads`,
+        name: `assets`,
       },
     },
     {
@@ -27,9 +27,19 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/_posts/blog`,
+        name: `blog`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -49,7 +59,6 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-plugin-netlify-cms-paths`,
         ],
       },
     },
