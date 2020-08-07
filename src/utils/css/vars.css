@@ -49,3 +49,35 @@
 .mb-10 {
   margin-bottom: 10px;
 }
+
+.mh-10 {
+  margin: 0px 10px;
+}
+
+.mv-10 {
+  margin: 10px 0px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.mt-20 {
+  margin-top: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mh-20 {
+  margin: 0px 20px;
+}
+
+.mv-20 {
+  margin: 20px 0px;
+}
+
+.m-20 {
+  margin: 20px;
+}

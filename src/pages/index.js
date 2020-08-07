@@ -11,6 +11,7 @@ import PostCard from "../components/PostCard"
 import { handleStyles } from "../lib/accessibility"
 import { Logo, Signature } from "../components/Icons"
 import Marquee from "../components/Marquee"
+import Spacer from "../components/Spacer"
 
 // import "../utils/global.scss"
 import "../utils/normalize.css"
@@ -38,7 +39,9 @@ const BlogIndex = ({ data }, location) => {
           </div>
         </LogoHero>
       </Header>
-      <Marquee image={data.face.childImageSharp.fluid} />
+      <Spacer top="10%">
+        <Marquee image={data.face.childImageSharp.fluid} />
+      </Spacer>
       <PostFeed posts={posts} />
       <Footer />
     </div>
