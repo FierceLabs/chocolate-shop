@@ -14,18 +14,18 @@ This is the final render.
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![Darkness](/content/assets/uploads/BLACK_II_desktop-1.jpg)
+![Darkness](../../content/assets/uploads/BLACK_II_desktop-1.jpg)
 
 </div>
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![Darkness](/content/assets/uploads/BLACK_IX_desktop-1.jpg)
+![Darkness](../../content/assets/uploads/BLACK_IX_desktop-1.jpg)
 
 </div>
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![Darkness](/content/assets/uploads/BLACK_I_desktop-1.jpg)
+![Darkness](../../content/assets/uploads/BLACK_I_desktop-1.jpg)
 
 </div>
