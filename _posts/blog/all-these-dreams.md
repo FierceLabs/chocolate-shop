@@ -10,8 +10,8 @@ description: All THese Dreams.
 
 Dreams Dreams Dreams
 
-<div class="kg-card kg-image-card kg-width-full">
+<div class="kg-card kg-image-card kg-width-wide">
 
-![Darkness](../../content/assets/uploads/BLACK_II_desktop-1.jpg)
+![Darkness](../../content/assets/uploads/all_these_dreams.png)
 
 </div>
