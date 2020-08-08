@@ -10,6 +10,7 @@
 .header-img::after {
   content: "";
   background: var(--header-image);
+  background-color: #fff;
   opacity: 0.9;
   top: 0;
   left: 0;
@@ -19,7 +20,7 @@
   z-index: var(--bg-index);
 }
 
-/* Remove */
+/* Remove once we get correct image*/
 
 .placeholder {
   min-height: 100vh;
@@ -31,7 +32,7 @@
 
 .placeholder::after {
   content: "";
-  background-color: rgb(232, 232, 232);
+  background-color: #fff;
   top: 0;
   left: 0;
   bottom: 0;

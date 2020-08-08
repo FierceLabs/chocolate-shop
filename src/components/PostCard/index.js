@@ -16,11 +16,7 @@ const PostCard = ({ count, postClass, node }) => (
     }
   >
     <Link to={node.fields.slug} className="pc-post-card-link">
-      <div className="pc-post-card-content">
-        <h2 className="pc-post-card-title">
-          {node.frontmatter.title || node.fields.slug}
-        </h2>
-      </div>
+      <div className="pc-post-card-content" />
     </Link>
   </article>
 )

@@ -41,7 +41,9 @@ const BlogIndex = ({ data }, location) => {
       </Header>
       <div className="placeholder" />
       <Marquee image={data.face.childImageSharp.fluid} />
-      <PostFeed posts={posts} />
+      <div style={{ backgroundColor: "#fff" }}>
+        <PostFeed posts={posts} />
+      </div>
       <Footer />
     </div>
   )
