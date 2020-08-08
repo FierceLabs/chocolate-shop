@@ -34,14 +34,13 @@ const BlogIndex = ({ data }, location) => {
         <Menu />
         <LogoHero>
           <Logo />
-          <div className="mt-10">
+          <Spacer top="10px">
             <Signature />
-          </div>
+          </Spacer>
         </LogoHero>
       </Header>
-      <Spacer top="10%">
-        <Marquee image={data.face.childImageSharp.fluid} />
-      </Spacer>
+      <div className="placeholder" />
+      <Marquee image={data.face.childImageSharp.fluid} />
       <PostFeed posts={posts} />
       <Footer />
     </div>
