@@ -1,6 +1,6 @@
 .pc-post-card {
   position: relative;
-  flex: 1 1 20%;
+  flex: 1 1 50%;
   display: flex;
   position: relative;
   height: 35vw;
@@ -10,26 +10,10 @@
   counter-increment: posts;
 }
 
-.pc-odd {
-  margin: 100px 100px 0px 25px;
-}
-
-.pc-even {
-  margin: 100px 25px 0px 100px;
-}
-
 @media (max-width: 700px) {
   .pc-post-card {
     flex: 1 1 100%;
     height: 70vw;
-  }
-
-  .pc-odd {
-    margin: 20px 20px 0px 20px;
-  }
-
-  .pc-even {
-    margin: 20px 20px 0px 20px;
   }
 }
 

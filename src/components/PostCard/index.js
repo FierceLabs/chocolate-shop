@@ -6,8 +6,7 @@ import "./styles.css"
 
 const PostCard = ({ count, postClass, node }) => (
   <article
-    className={`pc-post-card 
-    ${count % 2 === 0 ? `pc-even` : `pc-odd`} ${postClass} ${
+    className={`pc-post-card ${postClass} ${
       node.frontmatter.thumbnail ? `pc-with-image` : `pc-no-image`
     }`}
     style={

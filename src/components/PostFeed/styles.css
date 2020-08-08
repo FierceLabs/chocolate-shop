@@ -1,5 +1,14 @@
 .pf-post-feed {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  margin: 100px auto;
+  max-width: 1200px;
+  padding: 50px;
+}
+
+@media (max-width: 700px) {
+  .pf-post-feed {
+    grid-template-columns: 1fr;
+  }
 }
