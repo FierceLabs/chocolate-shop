@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 const CommonHeader = props => {
-  const { title, handleClick } = props
+  const { title, handleClick, location } = props
   return (
     <header className="ch-site-head">
       <div className="ch-site-head-container">
@@ -22,16 +22,36 @@ const CommonHeader = props => {
         </a>
         <nav id="swup" className="ch-site-head-left">
           <ul className="ch-nav" role="menu">
-            <li className="ch-nav-home ch-nav-current" role="menuitem">
+            <li
+              className={`ch-nav-home ${
+                location.pathname === "/" ? "ch-nav-current" : ""
+              }`}
+              role="menuitem"
+            >
               <Link to={`/`}>Home</Link>
             </li>
-            <li className="ch-nav-listen" role="menuitem">
+            <li
+              className={`ch-nav-listen ${
+                location.pathname === "/listen" ? "ch-nav-current" : ""
+              }`}
+              role="menuitem"
+            >
               <Link to={`/listen`}>Listen</Link>
             </li>
-            <li className="ch-nav-about" role="menuitem">
+            <li
+              className={`ch-nav-about ${
+                location.pathname === "/about" ? "ch-nav-current" : ""
+              }`}
+              role="menuitem"
+            >
               <Link to={`/about`}>About</Link>
             </li>
-            <li className="ch-nav-elements" role="menuitem">
+            <li
+              className={`ch-nav-contact ${
+                location.pathname === "/contact" ? "ch-nav-current" : ""
+              }`}
+              role="menuitem"
+            >
               <Link to={`/contact`}>Contact Us</Link>
             </li>
           </ul>
@@ -77,6 +97,7 @@ const CommonHeader = props => {
 CommonHeader.propTypes = {
   title: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
+  location: PropTypes.object,
 }
 
 export default CommonHeader
