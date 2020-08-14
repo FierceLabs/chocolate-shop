@@ -1,0 +1,47 @@
+import React from "react"
+import PropTypes from "prop-types"
+import Img from "gatsby-image"
+import AudioPlayer from "react-h5-audio-player"
+import "react-h5-audio-player/lib/styles.css"
+import styles from "./styles.css"
+
+// component class = af
+
+const AudioFeature = ({ post, defaultThumbnail }) => {
+  const { node } = post
+  const { excerpt, frontmatter } = node
+  const { audio, thumbnail, title } = frontmatter
+
+  return (
+    <div className="af-main-container">
+      <h2 className="title">{title}</h2>
+      <div className="af-container">
+        <div className="af-thumbnail">
+          {thumbnail && (
+            <Img
+              className="kg-image"
+              fluid={thumbnail.childImageSharp.fluid}
+              alt={title}
+            />
+          )}
+          {!thumbnail && (
+            <Img
+              className="kg-image"
+              fluid={defaultThumbnail.childImageSharp.fluid}
+              alt={title}
+            />
+          )}
+        </div>
+        <div className="af-audio">
+          {audio && <AudioPlayer src={audio} layout="horizontal-reverse" />}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+AudioFeature.propTypes = {
+  audio: PropTypes.string.isRequired,
+}
+
+export default AudioFeature

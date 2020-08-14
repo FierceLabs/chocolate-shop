@@ -1,0 +1,27 @@
+.page-template .post-content-body h2.title {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.af-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.af-thumbnail {
+  display: flex;
+  flex: 1;
+  max-width: 60px;
+}
+
+.af-audio {
+  display: flex;
+  flex: 7;
+}
+
+.af-container .af-audio .rhap_container {
+  background-color: rgb(249, 249, 249);
+}
