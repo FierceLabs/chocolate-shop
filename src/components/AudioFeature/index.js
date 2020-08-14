@@ -1,20 +1,24 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 import AudioPlayer from "react-h5-audio-player"
 import "react-h5-audio-player/lib/styles.css"
-import styles from "./styles.css"
+import "./styles.css"
 
 // component class = af
 
 const AudioFeature = ({ post, defaultThumbnail }) => {
   const { node } = post
-  const { excerpt, frontmatter } = node
+  const { excerpt, frontmatter, fields } = node
+  const { slug } = fields
   const { audio, thumbnail, title } = frontmatter
 
   return (
     <div className="af-main-container">
-      <h2 className="title">{title}</h2>
+      <Link to={node.fields.slug}>
+        <h2 className="title">{title}</h2>
+      </Link>
       <div className="af-container">
         <div className="af-thumbnail">
           {thumbnail && (

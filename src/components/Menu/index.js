@@ -48,30 +48,30 @@ const Menu = () => {
         >
           Contact Us
         </Link>
-        <Link
+        <a
           href="https://www.facebook.com/nelsonatthehelm"
           title="Facebook"
           target="_blank"
           rel="noopener noreferrer"
         >
           Facebook
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://www.spotify.com"
           title="Spotify"
           target="_blank"
           rel="noopener noreferrer"
         >
           Spotify
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://youtube.com/nelsonatthehelm"
           title="Youtube"
           target="_blank"
           rel="noopener noreferrer"
         >
           Youtube
-        </Link>
+        </a>
       </div>
     )
   }
