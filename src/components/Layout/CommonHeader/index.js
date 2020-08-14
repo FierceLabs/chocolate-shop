@@ -2,6 +2,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import { Facebook, Youtube, Spotify } from "../../Icons"
 
 const CommonHeader = props => {
   const { title, handleClick, location } = props
@@ -63,30 +64,36 @@ const CommonHeader = props => {
         </div>
         <div className="ch-site-head-right">
           <div className="ch-social-links">
-            <a
-              href="https://www.facebook.com"
-              title="Facebook"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Facebook
-            </a>
-            <a
-              href="https://twitter.com"
-              title="Twitter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Twitter
-            </a>
-            <Link
-              to={`/rss.xml`}
-              title="RSS"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              RSS
-            </Link>
+            <div className="facebook">
+              <Link
+                href="https://www.facebook.com/nelsonatthehelm"
+                title="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook width={27} height={27} />
+              </Link>
+            </div>
+            <div className="spotify">
+              <Link
+                href="https://spotify.com/"
+                title="Spotify"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Spotify width={23} height={23} />
+              </Link>
+            </div>
+            <div className="youtube">
+              <Link
+                href="https://youtube.com/nelsonatthehelm"
+                title="Youtube"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Youtube width={30} height={30} />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

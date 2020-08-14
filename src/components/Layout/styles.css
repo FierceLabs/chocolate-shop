@@ -118,6 +118,14 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.spotify {
+  display: flex;
+  flex: 1;
+  padding-bottom: 2px;
+  align-self: center;
 }
 
 /* Mobile Nav Menu
@@ -171,6 +179,11 @@
     padding: 5px 0;
     margin: 1px 0;
     font-size: 2rem;
+  }
+  .ch-site-head-open .ch-site-head-right a:hover {
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 0.1s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   }
   .ch-nav {
     width: 100%;

@@ -17,10 +17,10 @@ const SuccessPage = ({ data, location }) => {
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
-          <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-            Success!
-          </h2>
-          <p>We will be reviewing your message soon!</p>
+          <h2>Success!</h2>
+          <p style={{ textAlign: "center" }}>
+            We will be reviewing your message soon!
+          </p>
         </div>
       </article>
     </Layout>

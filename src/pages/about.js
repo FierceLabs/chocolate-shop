@@ -17,7 +17,7 @@ const AboutPage = ({ data, location }) => {
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
-          <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
+          <h2>
             Fun, creative, and thought-provoking. Nelson At The Helm is a duo
             made for people who appreciate classically good music.
           </h2>

@@ -1,0 +1,44 @@
+import React from "react"
+import PropTypes from "prop-types"
+
+const Facebook = props => {
+  const widthValue = isNaN(props.width) ? props.width : props.width + "px"
+  const heightValue = isNaN(props.height) ? props.height : props.height + "px"
+  const ariaId = `${props.title}_title`
+  return (
+    <svg
+      version="1.0"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 50 50"
+      style={{
+        minWidth: widthValue,
+        width: widthValue,
+        height: heightValue,
+      }}
+      aria-hidden="true"
+      className={"icon " + props.className}
+      aria-labelledby={ariaId}
+    >
+      <title>{props.title}</title>
+      <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z" />
+    </svg>
+  )
+}
+
+Facebook.propTypes = {
+  fill: PropTypes.string,
+  width: PropTypes.oneOfType([PropTypes.oneOf(["auto"]), PropTypes.number]),
+  height: PropTypes.oneOfType([PropTypes.oneOf(["auto"]), PropTypes.number]),
+  className: PropTypes.string,
+  title: PropTypes.string,
+}
+
+Facebook.defaultProps = {
+  height: 40,
+  width: 40,
+  fill: "#000000",
+  title: "Facebook",
+  className: "",
+}
+
+export default Facebook

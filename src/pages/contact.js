@@ -17,9 +17,7 @@ const ContactPage = ({ data, location }) => {
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
-          <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-            Feel free to reach out.
-          </h2>
+          <h2>Feel free to reach out.</h2>
           <p>
             London comes with photo-centric main layout best suited to
             photography, graphics portfolios and other image-heavy uses.

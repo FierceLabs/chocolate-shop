@@ -36,6 +36,9 @@ const Menu = () => {
         <Link className={current === "home" ? "h-active" : ""} to={`/`}>
           Home
         </Link>
+        <Link className={current === "listen" ? "h-active" : ""} to={`/listen`}>
+          Listen
+        </Link>
         <Link className={current === "about" ? "h-active" : ""} to={`/about`}>
           About
         </Link>
@@ -46,34 +49,28 @@ const Menu = () => {
           Contact Us
         </Link>
         <Link
-          className={current === "contact" ? "h-active" : ""}
-          to={`/listen`}
-        >
-          Listen
-        </Link>
-        <a
-          href="https://www.facebook.com"
+          href="https://www.facebook.com/nelsonatthehelm"
           title="Facebook"
           target="_blank"
           rel="noopener noreferrer"
         >
           Facebook
-        </a>
-        <a
-          href="https://twitter.com"
-          title="Twitter"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Youtube
-        </a>
+        </Link>
         <Link
-          to={`/rss.xml`}
-          title="RSS"
+          href="https://www.spotify.com"
+          title="Spotify"
           target="_blank"
           rel="noopener noreferrer"
         >
           Spotify
+        </Link>
+        <Link
+          href="https://youtube.com/nelsonatthehelm"
+          title="Youtube"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Youtube
         </Link>
       </div>
     )
