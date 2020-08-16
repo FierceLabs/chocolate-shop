@@ -6,9 +6,7 @@ date: 2020-08-08T20:19:44.034Z
 thumbnail: /content/assets/uploads/aspen.jpg
 description: Playing For Keeps
 ---
-When you find a once-in-a-lifetime kind of girl, you hold on to her and you don't let go.
-
-
+## When you find a once-in-a-lifetime kind of girl, you hold on to her and you don't let go.
 
 > We were running downtown.
 >
@@ -32,8 +30,6 @@ When you find a once-in-a-lifetime kind of girl, you hold on to her and you don'
 >
 > I'm holding on with both of my hands.
 >
->
->
 > I won't let you GO!
 >
 > NO!
@@ -41,8 +37,6 @@ When you find a once-in-a-lifetime kind of girl, you hold on to her and you don'
 > A heart that beats is a heart that bleeds.
 >
 > Baby, I'm playing for keeps.
->
->
 >
 > I remember walking away from that green apartment door.
 >
@@ -62,8 +56,6 @@ When you find a once-in-a-lifetime kind of girl, you hold on to her and you don'
 >
 > I'm holding on with both of my hands.
 >
->
->
 > I won't let you GO!
 >
 > NO!
@@ -71,8 +63,6 @@ When you find a once-in-a-lifetime kind of girl, you hold on to her and you don'
 > A heart that beats is a heart that bleeds.
 >
 > Baby, I'm playing for keeps.
->
->
 >
 > The top of the hill was getting closer, closer.
 >
