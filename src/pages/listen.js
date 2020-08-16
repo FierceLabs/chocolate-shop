@@ -24,8 +24,11 @@ const ListenPage = ({ data, location }) => {
         <div className="post-content-body">
           <h2>We just dropped an album. Take a listen!</h2>
           <p>
-            London comes with photo-centric main layout best suited to
-            photography, graphics portfolios and other image-heavy uses.
+            Our first album, <em>All These Dreams</em>, is full of our hope and
+            desire to change the world. Changing the world starts with us. We
+            want to love in purity, we long to be filled with faith, and we are
+            haunted by the knowledge that God has a life for us more abundant
+            than we can imagine.
           </p>
           {posts &&
             posts.map((post, index) => (

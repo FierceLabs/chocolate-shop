@@ -1,3 +1,17 @@
+.pc-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pc-image {
+  width: 50%;
+  height: 50%;
+}
+
+.audio {
+  margin: 50px 0;
+}
+
 .rhap_volume-container > button,
 .rhap_main-controls > button,
 .rhap_additional-controls > button {

@@ -17,36 +17,64 @@ const AboutPage = ({ data, location }) => {
       <article className="post-content page-template no-image">
         <div className="post-content-body">
           <h2>
-            Fun, creative, and thought-provoking. Nelson At The Helm is a duo
-            made for people who appreciate classically good music.
+            Established in 2012 <br />
+            and disbanded in 2192
           </h2>
           <figure className="kg-card kg-image-card kg-width-full">
             <Img
               fluid={data.benchAccounting.childImageSharp.fluid}
               className="kg-image"
             />
-            <figcaption>Large imagery is at the heart of this theme</figcaption>
           </figure>
-          <h3 id="dynamic-styles">Dynamic styles</h3>
+          <h3 id="dynamic-styles">About the band</h3>
+          <p>Nelson At The Helm is an Indie Pop / Indie Rock duo.</p>
           <p>
-            London comes with photo-centric main layout best suited to
-            photography, graphics portfolios and other image-heavy uses.
+            Our names are Jared and Rachelle. We really like each other. (Maybe
+            too much. There have been accusations.) One day, we decided to get
+            married. In 2012, our pastor performed a simple ceremony in a lawn
+            next to a cornfield, launching us into a lifetime of adventures
+            together.
           </p>
           <p>
-            Both post and page templates are light and minimal, with all the
-            focus on the content while the design of the theme gets out of the
-            way. Beneath the hood, London enjoys the full power of the{" "}
-            <a href="https://docs.ghost.org/api/handlebars-themes/">
-              Ghost Handlebars Theme API
-            </a>{" "}
-            to provide limitless customisation options and dynamic styles.
+            Jared studied music in college. Rachelle liked to sing harmonies
+            along with the radio. Inevitably, we ended up singing together.
           </p>
           <p>
-            Don't forget to check out the{" "}
-            <a href="https://docs.ghost.org/integrations/">
-              Ghost Integrations Directory
-            </a>{" "}
-            for more ways to integrate Ghost with your favourite services.
+            We write love songs. We also write about theology and philosophy.
+            Sometimes we write about completely made up scenarios from our heads
+            that make us want to laugh or cry.
+          </p>
+          <p>
+            Everyone experiences pain. We live in a ruined world on the edge of
+            eternity. With that in mind, we hope that our music can bring hope,
+            joy, or at least a moment of connection.
+          </p>
+          <p>
+            Our first album, <em>All These Dreams</em>, is full of our hope and
+            desire to change the world. Changing the world starts with us. We
+            want to love in purity, we long to be filled with faith, and we are
+            haunted by the knowledge that God has a life for us more abundant
+            than we can imagine.
+          </p>
+          <p className="footnotes">
+            <strong>*A note about our band name:</strong>
+          </p>
+          <p className="footnotes">{`Nelson At The Helm has been our moniker since 2012. 
+          We both grew up in land-locked Idaho and have romanticized anything coastal since our childhoods. 
+          Nelson is our last name and a 'helm' is the steering wheel of a nautical ship, 
+          which sounded pretty cool to us, so we printed it on a t-shirt and the band name stuck.`}</p>
+          <p className="footnotes">
+            In the years since, we have questioned it. We have seen loss and
+            sorrow in the world around us. We have faced illness. Rachelle was
+            diagnosed with a symptomatic brain tumor that drastically altered
+            our lives. Our ocean is not smooth.
+          </p>
+          <p className="footnotes">
+            {`No matter what we might tell ourselves in our illusionist desire for
+            control, we are not at the helm of our lives. Nor do we want to be.
+            We have given the helm over to the one who made the seas. The wind
+            and the waves obey him. Jesus is steering our ship, and we couldn't
+            be more thankful.`}
           </p>
         </div>
       </article>

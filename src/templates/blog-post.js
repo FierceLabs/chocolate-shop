@@ -11,6 +11,7 @@ import "./styles.css"
 
 class BlogPostTemplate extends React.Component {
   render() {
+    console.log(this.props.data)
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
 
@@ -33,21 +34,22 @@ class BlogPostTemplate extends React.Component {
           )}
 
           {post.frontmatter.thumbnail && (
-            <div className="post-content-image">
+            <div className="post-content-image pc-image-container">
               <Img
-                className="kg-image"
+                className="kg-image pc-image"
                 fluid={post.frontmatter.thumbnail.childImageSharp.fluid}
                 alt={post.frontmatter.title}
               />
             </div>
           )}
-
-          {post.frontmatter.audio && (
-            <AudioPlayer
-              src={post.frontmatter.audio}
-              layout="stacked-reverse"
-            />
-          )}
+          <div className="audio">
+            {post.frontmatter.audio && (
+              <AudioPlayer
+                src={post.frontmatter.audio}
+                layout="stacked-reverse"
+              />
+            )}
+          </div>
 
           <div
             className="post-content-body"
@@ -84,6 +86,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         audio
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 1360) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
