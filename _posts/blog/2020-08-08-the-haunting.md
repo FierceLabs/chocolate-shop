@@ -6,6 +6,9 @@ date: 2020-08-08T20:22:08.080Z
 thumbnail: /content/assets/uploads/all_these_dreams_copy.jpg
 description: The Haunting
 ---
-![](../../content/assets/uploads/aspen.jpg "Aspens")
+#### Haunt·ing
+/ˈhôn(t)iNG/
+adjective
+Poignant and evocative; difficult to ignore or forget.
 
-### The Haunting
+##### We are haunted by the Holy Ghost. We can't forget that we are more than material.
