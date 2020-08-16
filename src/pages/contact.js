@@ -19,8 +19,9 @@ const ContactPage = ({ data, location }) => {
         <div className="post-content-body">
           <h2>Feel free to reach out.</h2>
           <p>
-            London comes with photo-centric main layout best suited to
-            photography, graphics portfolios and other image-heavy uses.
+            {`Love our music? Hate our music? Want us to play a show at your
+            birthday pizza-party in the South Caribbean while wearing flamingo
+            costumes? We've heard it all. Feel free to reach out!`}
           </p>
           <h2 id="forms">Contact Us</h2>
           <form
