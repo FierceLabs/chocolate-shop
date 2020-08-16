@@ -37,8 +37,8 @@ const BlogIndex = ({ data }, location) => {
           </Spacer>
         </LogoHero>
       </Header>
-      <div className="placeholder" />
-      <Marquee image={data.face.childImageSharp.fluid} />
+      {/* <div className="placeholder" /> */}
+      {/* <Marquee image={data.face.childImageSharp.fluid} /> */}
       <div style={{ backgroundColor: "#fff" }}>
         <PostFeed posts={posts} />
       </div>
