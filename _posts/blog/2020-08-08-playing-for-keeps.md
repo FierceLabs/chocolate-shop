@@ -6,7 +6,7 @@ date: 2020-08-08T20:19:44.034Z
 thumbnail: /content/assets/uploads/aspen.jpg
 description: Playing For Keeps
 ---
-## When you find a once-in-a-lifetime kind of girl, you hold on to her and you don't let go.
+#### When you find a once-in-a-lifetime kind of girl, you hold on to her and you don't let go.
 
 > We were running downtown.
 >
