@@ -25,3 +25,21 @@
 .af-container .af-audio .rhap_container {
   background-color: rgb(249, 249, 249);
 }
+
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+}

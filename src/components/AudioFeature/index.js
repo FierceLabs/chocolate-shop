@@ -19,25 +19,34 @@ const AudioFeature = ({ post, defaultThumbnail }) => {
       <Link to={node.fields.slug}>
         <h2 className="title">{title}</h2>
       </Link>
-      <div className="af-container">
-        <div className="af-thumbnail">
-          {thumbnail && (
-            <Img
-              className="kg-image"
-              fluid={thumbnail.childImageSharp.fluid}
-              alt={title}
-            />
-          )}
-          {!thumbnail && (
-            <Img
-              className="kg-image"
-              fluid={defaultThumbnail.childImageSharp.fluid}
-              alt={title}
-            />
-          )}
+      <div className="desktop">
+        <div className="af-container">
+          <div className="af-thumbnail">
+            {thumbnail && (
+              <Img
+                className="kg-image"
+                fluid={thumbnail.childImageSharp.fluid}
+                alt={title}
+              />
+            )}
+            {!thumbnail && (
+              <Img
+                className="kg-image"
+                fluid={defaultThumbnail.childImageSharp.fluid}
+                alt={title}
+              />
+            )}
+          </div>
+          <div className="af-audio">
+            {audio && <AudioPlayer src={audio} layout="horizontal-reverse" />}
+          </div>
         </div>
-        <div className="af-audio">
-          {audio && <AudioPlayer src={audio} layout="horizontal-reverse" />}
+      </div>
+      <div className="mobile">
+        <div>
+          <div className="af-audio">
+            {audio && <AudioPlayer src={audio} layout="stacked-reverse" />}
+          </div>
         </div>
       </div>
     </div>
