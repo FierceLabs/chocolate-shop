@@ -3,7 +3,7 @@ layout: blog
 title: Mechanical
 audio: https://nelson-at-the-helm.s3-us-west-2.amazonaws.com/The+Longest+Kiss.mp3
 date: 2020-08-08T20:21:33.016Z
-thumbnail: /content/assets/uploads/rocks.jpg
+thumbnail: /content/assets/uploads/mechanical.jpg
 description: Mechanical
 ---
 #### Jared began to write this song in biology class. Some look at science and see a reason to evade God. We see a work of art, breathed into life by Holy breath.
