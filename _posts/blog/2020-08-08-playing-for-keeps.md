@@ -3,7 +3,7 @@ layout: blog
 title: Playing For Keeps
 audio: https://nelson-at-the-helm.s3-us-west-2.amazonaws.com/The+Longest+Kiss.mp3
 date: 2020-08-08T20:19:44.034Z
-thumbnail: /content/assets/uploads/defaultThumbnail.jpg
+thumbnail: /content/assets/uploads/aspen.jpg
 description: Playing For Keeps
 ---
 When you find a once-in-a-lifetime kind of girl, you hold on to her and you don't let go.
