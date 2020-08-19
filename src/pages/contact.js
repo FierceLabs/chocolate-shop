@@ -24,14 +24,7 @@ const ContactPage = ({ data, location }) => {
             costumes? We've heard it all. Feel free to reach out!`}
           </p>
           <h2 id="forms">Contact Us</h2>
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            action="/success"
-          >
-            <input type="hidden" name="form-name" value="contact" />
+          <form name="contact">
             <div className="row gtr-uniform">
               <div className="col-6 col-12-xsmall">
                 <input
