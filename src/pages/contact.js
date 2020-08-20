@@ -1,6 +1,5 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React, { useState } from "react"
+import { graphql, StaticQuery, navigate } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -9,6 +8,42 @@ import "../utils/normalize.css"
 import "../utils/css/screen.css"
 
 const ContactPage = ({ data, location }) => {
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    category: "inquiries",
+    subject: "",
+    message: "",
+  })
+  const [checkboxState, setCheckboxState] = useState(false)
+  const onChange = e => {
+    setFormState({ ...formState, [e.target.name]: e.target.value })
+  }
+  const onChangeCheckbox = () => {
+    setCheckboxState(!checkboxState)
+  }
+
+  const handleSubmit = async e => {
+    e.preventDefault()
+    console.log(JSON.stringify(formState))
+
+    // try {
+    //   const response = await fetch("/.netlify/functions/sendmail", {
+    //     method: "POST",
+    //     body: JSON.stringify(formState),
+    //   })
+
+    //   if (!response.ok) {
+    //     //not 200 response
+    //     return
+    //   }
+
+    //   //all OK
+    // } catch (e) {
+    //   //error
+    // }
+    navigate("/success")
+  }
   const siteTitle = data.site.siteMetadata.title
 
   return (
@@ -24,31 +59,40 @@ const ContactPage = ({ data, location }) => {
             costumes? We've heard it all. Feel free to reach out!`}
           </p>
           <h2 id="forms">Contact Us</h2>
-          <form name="contact">
+          <form name="contact" onSubmit={handleSubmit}>
             <div className="row gtr-uniform">
               <div className="col-6 col-12-xsmall">
                 <input
                   type="text"
-                  name="demo-name"
+                  name="name"
                   id="demo-name"
                   placeholder="Name"
+                  onChange={onChange}
+                  value={formState.name}
                 />
               </div>
               <div className="col-6 col-12-xsmall">
                 <input
                   type="email"
-                  name="demo-email"
+                  name="email"
                   id="demo-email"
                   placeholder="Email"
+                  onChange={onChange}
+                  value={formState.email}
                 />
               </div>
               {/* Break */}
               <div className="col-12">
-                <select name="demo-category" id="demo-category">
+                <select
+                  name="category"
+                  id="demo-category"
+                  onChange={onChange}
+                  value={formState.category}
+                >
                   <option value>- Category -</option>
-                  <option value={1}>Inquiries</option>
-                  <option value={1}>Comments</option>
-                  <option value={1}>Booking</option>
+                  <option value={"inquiries"}>Inquiries</option>
+                  <option value={"comments"}>Comments</option>
+                  <option value={"booking"}>Booking</option>
                 </select>
               </div>
               {/* Break */}
@@ -56,19 +100,32 @@ const ContactPage = ({ data, location }) => {
                 <input
                   type="checkbox"
                   id="demo-human"
-                  name="demo-human"
-                  defaultChecked
+                  name="human"
+                  onChange={onChangeCheckbox}
+                  value={checkboxState}
                 />
                 <label htmlFor="demo-human">I am a human</label>
               </div>
               {/* Break */}
+              <div className="col-12 col-12-xsmall">
+                <input
+                  type="text"
+                  name="subject"
+                  id="demo-subject"
+                  placeholder="Subject"
+                  onChange={onChange}
+                  value={formState.subject}
+                />
+              </div>
+              {/* Break */}
               <div className="col-12">
                 <textarea
-                  name="demo-message"
+                  name="message"
                   id="demo-message"
                   placeholder="Enter your message"
                   rows={6}
-                  defaultValue={""}
+                  onChange={onChange}
+                  value={formState.message}
                 />
               </div>
               {/* Break */}
@@ -79,6 +136,7 @@ const ContactPage = ({ data, location }) => {
                       type="submit"
                       defaultValue="Send Message"
                       className="primary"
+                      disabled={!checkboxState}
                     />
                   </li>
                   <li>
