@@ -27,7 +27,7 @@ const ContactPage = ({ data, location }) => {
     e.preventDefault()
     console.log(JSON.stringify(formState))
 
-    // try {
+    // try { //
     //   const response = await fetch("/.netlify/functions/sendmail", {
     //     method: "POST",
     //     body: JSON.stringify(formState),
