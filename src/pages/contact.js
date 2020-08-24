@@ -40,6 +40,9 @@ const ContactPage = ({ data, location }) => {
         {
           method: "POST",
           body: JSON.stringify(body),
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
       )
 
