@@ -25,23 +25,33 @@ const ContactPage = ({ data, location }) => {
 
   const handleSubmit = async e => {
     e.preventDefault()
-    console.log(JSON.stringify(formState))
+    const body = {
+      clientEmail: formState.email,
+      clientName: "Nelson At The Helm",
+      userEmail: "roial33@hotmail.com",
+      userSubject: formState.subject,
+      type: formState.category,
+      userMessage: formState.message,
+    }
 
-    // try { //
-    //   const response = await fetch("/.netlify/functions/sendmail", {
-    //     method: "POST",
-    //     body: JSON.stringify(formState),
-    //   })
+    try {
+      const response = await fetch(
+        "https://j77237xnyl.execute-api.us-west-2.amazonaws.com/Prod/no-reply-email",
+        {
+          method: "POST",
+          body: JSON.stringify(body),
+        }
+      )
 
-    //   if (!response.ok) {
-    //     //not 200 response
-    //     return
-    //   }
+      if (!response.ok) {
+        //not 200 response
+        return
+      }
 
-    //   //all OK
-    // } catch (e) {
-    //   //error
-    // }
+      //all OK
+    } catch (e) {
+      //error
+    }
     navigate("/success")
   }
   const siteTitle = data.site.siteMetadata.title
