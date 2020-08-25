@@ -29,6 +29,7 @@ const ContactPage = ({ data, location }) => {
       clientEmail: formState.email,
       clientName: "Nelson At The Helm",
       userEmail: "roial33@hotmail.com",
+      userName: formState.name,
       userSubject: formState.subject,
       type: formState.category,
       userMessage: formState.message,
@@ -46,13 +47,17 @@ const ContactPage = ({ data, location }) => {
         }
       )
 
+      console.log(response)
+
       if (!response.ok) {
+        console.log(`WHAT`, response)
         //not 200 response
         return
       }
 
       //all OK
     } catch (e) {
+      console.log(`error`, e)
       //error
     }
     navigate("/success")
