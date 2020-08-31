@@ -32,7 +32,7 @@ const ContactPage = ({ data, location }) => {
       userName: formState.name,
       userSubject: formState.subject,
       type: formState.category,
-      userMessage: formState.message,
+      userMessage: formState.message.replace(/\n/g, "<br/>"),
     }
 
     try {
