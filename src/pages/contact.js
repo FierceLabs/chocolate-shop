@@ -8,13 +8,14 @@ import "../utils/normalize.css"
 import "../utils/css/screen.css"
 
 const ContactPage = ({ data, location }) => {
-  const [formState, setFormState] = useState({
+  let initialState = {
     name: "",
     email: "",
-    category: "inquiries",
+    category: "",
     subject: "",
     message: "",
-  })
+  }
+  const [formState, setFormState] = useState(initialState)
   const [checkboxState, setCheckboxState] = useState(false)
   const onChange = e => {
     setFormState({ ...formState, [e.target.name]: e.target.value })
@@ -158,7 +159,11 @@ const ContactPage = ({ data, location }) => {
                     />
                   </li>
                   <li>
-                    <input type="reset" defaultValue="Reset" />
+                    <input
+                      type="reset"
+                      defaultValue="Reset"
+                      onClick={() => setFormState(initialState)}
+                    />
                   </li>
                 </ul>
               </div>
