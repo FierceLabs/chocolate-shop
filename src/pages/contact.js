@@ -55,13 +55,12 @@ const ContactPage = ({ data, location }) => {
         //not 200 response
         return
       }
-
       //all OK
+      navigate("/success")
     } catch (e) {
       console.log(`error`, e)
       //error
     }
-    navigate("/success")
   }
   const siteTitle = data.site.siteMetadata.title
 
