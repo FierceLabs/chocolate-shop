@@ -3,7 +3,7 @@ layout: blog
 title: Battle Cry
 audio: https://nelson-at-the-helm.s3-us-west-2.amazonaws.com/The+Longest+Kiss.mp3
 date: 2020-08-08T20:17:04.960Z
-thumbnail: /content/assets/uploads/bbbb.jpg
+thumbnail: /content/assets/uploads/battle-cry.jpg
 description: Battle Cry
 ---
 #### Our battle is not against flesh and blood.
