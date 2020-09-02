@@ -25,8 +25,8 @@ const BlogIndex = ({ data }, location) => {
   return (
     <div>
       <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        title="Nelson At The Helm | Official Site | The SoundTrack To A Revolution"
+        keywords={[`nelson`, `helm`, `official site`, `band`]}
       />
       <Header>
         <Menu />
