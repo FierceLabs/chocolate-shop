@@ -1,10 +1,63 @@
+@import "../../utils/css/vars.css";
+
 .f-site-foot {
-  margin: 3vw 0 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3vw 0 0;
+  padding: 1vw;
   text-align: center;
   color: color(var(--color-border) l(-20%));
   font-size: 1.4rem;
 }
 
-.f-site-foot a {
-  color: var(--color-base);
+.f-logo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 12px;
+}
+
+.f-register {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-left: 2px;
+}
+
+.f-site-foot .f-site-info a {
+  color: black;
+}
+
+.f-site-foot .f-links a {
+  color: black;
+}
+
+.f-site-foot.black {
+  padding: 6vw 0 2vw 0;
+  color: color(var(--color-border) l(-20%));
+  background-color: var(--dark-gray);
+}
+
+.f-site-foot.black .f-site-info a {
+  color: color(var(--color-border) l(-20%));
+}
+
+.f-site-foot.black .f-links a {
+  color: color(var(--color-border) l(-20%));
+}
+
+.f-social-links {
+  display: flex;
+  flex-direction: row;
+  min-width: 110px;
+  justify-content: space-between;
+  margin: 30px 0 10px 0;
+}
+
+.f-links {
+  margin: 0 0 3vw 0;
+}
+
+.f-site-foot.black .f-links {
+  margin: 0 0 4vw 0;
 }

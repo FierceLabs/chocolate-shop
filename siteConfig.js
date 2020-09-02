@@ -1,9 +1,9 @@
 module.exports = {
-  name: "NELSON AT THE HELM",
-  shortName: "NELSON AT THE HELM",
+  name: "Nelson At The Helm",
+  shortName: "Nelson At The Helm",
   description: "Bringing music to the masses",
   url: "https://gatsby-london.netlify.com", // Domain of your site without prefix!
   prefix: "/",
-  author: "Imed Adel",
-  twitter: "Imed_Adel",
+  author: "Fierce Island",
+  twitter: "Fierce Island",
 }

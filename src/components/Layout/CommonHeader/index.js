@@ -59,7 +59,7 @@ const CommonHeader = props => {
         </nav>
         <div className="ch-site-head-center">
           <Link className="ch-site-head-logo" to={`/`}>
-            {title}
+            {title.toUpperCase()}
           </Link>
         </div>
         <div className="ch-site-head-right">

@@ -25,7 +25,7 @@ const BlogIndex = ({ data }, location) => {
   return (
     <div>
       <SEO
-        title="Nelson At The Helm | Official Site | The SoundTrack To A Revolution"
+        title="Official Site | The SoundTrack To A Revolution"
         keywords={[`nelson`, `helm`, `official site`, `band`]}
       />
       <Header>
@@ -42,7 +42,7 @@ const BlogIndex = ({ data }, location) => {
       <div style={{ backgroundColor: "#fff" }}>
         <PostFeed posts={posts} />
       </div>
-      <Footer />
+      <Footer title={siteTitle} color={"black"} />
     </div>
   )
 }
