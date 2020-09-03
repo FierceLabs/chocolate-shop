@@ -18,7 +18,7 @@ const Layout = props => {
           {children}
         </div>
       </main>
-      <Footer title={title} />
+      <Footer title={title} isOpen={toggleNav} />
     </div>
   )
 }
