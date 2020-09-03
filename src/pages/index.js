@@ -1,5 +1,7 @@
+// component class = i
 import React, { useEffect } from "react"
 import { graphql, StaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import LogoHero from "../components/LogoHero"
@@ -8,7 +10,7 @@ import SEO from "../components/seo"
 import PostFeed from "../components/PostFeed"
 import { handleStyles } from "../lib/accessibility"
 import { Logo, Signature } from "../components/Icons"
-import Marquee from "../components/Marquee"
+// import Marquee from "../components/Marquee"
 import Spacer from "../components/Spacer"
 
 // import "../utils/global.scss"
@@ -37,6 +39,11 @@ const BlogIndex = ({ data }, location) => {
           </Spacer>
         </LogoHero>
       </Header>
+      <Spacer horizontal="3vw" vertical="3vw">
+        <figure className="kg-image-card kg-width-full">
+          <Img fluid={data.stack.childImageSharp.fluid} className="kg-image" />
+        </figure>
+      </Spacer>
       {/* <div className="placeholder" /> */}
       {/* <Marquee image={data.face.childImageSharp.fluid} /> */}
       <div style={{ backgroundColor: "#fff" }}>
@@ -76,7 +83,7 @@ const indexQuery = graphql`
         }
       }
     }
-    face: file(relativePath: { eq: "face.png" }) {
+    stack: file(relativePath: { eq: "stack.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid

@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -23,6 +24,13 @@ const ListenPage = ({ data, location }) => {
       <article className="post-content page-template no-image">
         <div className="post-content-body">
           <h2>We just dropped an album. Take a listen!</h2>
+          <figure className="kg-card kg-image-card kg-width-full">
+            <Img
+              fluid={data.benchAccounting.childImageSharp.fluid}
+              className="kg-image"
+            />
+          </figure>
+          <h2>All These Dreams</h2>
           <p>
             Our first album, <em>All These Dreams</em>, is full of our hope and
             desire to change the world. Changing the world starts with us. We
@@ -57,6 +65,13 @@ const indexQuery = graphql`
       }
     }
     defaultThumbnail: file(relativePath: { eq: "defaultThumbnail.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1360) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    benchAccounting: file(relativePath: { eq: "album.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
