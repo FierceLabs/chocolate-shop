@@ -1,11 +1,11 @@
 import CMS from "netlify-cms-app"
-import React from "react"
-import "netlify-cms-yoast-seo/dist/main.js"
 import PropTypes from "prop-types"
+import "netlify-cms-yoast-seo/dist/main.js"
 const YOAST = window.YOAST
 
-class YoastComponent extends React.Component {
-  render() {
+var createReactClass = require("create-react-class")
+var YoastComponent = createReactClass({
+  render: function() {
     console.log(`rendering!!!!!`)
     const entry = this.props.entry
     const title = entry.getIn(["data", "title"]) || ""
@@ -19,12 +19,12 @@ class YoastComponent extends React.Component {
     })
 
     return h("div", {}, this.props.widgetFor("body"), YOAST.getScoresAsHTML(h))
-  }
-}
+  },
+})
 
 YoastComponent.propTypes = {
-  entry: PropTypes.object,
-  widgetFor: PropTypes.object,
+  entry: PropTypes.any,
+  widgetFor: PropTypes.any,
 }
 
 console.log(`running!!!!!(((((((((((((((())))))))))))))))`)
