@@ -9,10 +9,12 @@
   <body>
     <!-- Include the script that builds the page and powers Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.10.61/dist/netlify-cms.js"></script>
-    <script src="/main.js"></script>
+    <script src="https://unpkg.com/netlify-cms-yoast-seo@~1.0/dist/main.js"></script>
 
     <script>
-      CMS.registerPreviewStyle("/cms.css")
+      CMS.registerPreviewStyle(
+        "https://unpkg.com/netlify-cms-yoast-seo@~1.0/dist/main.css"
+      )
       CMS.registerPreviewTemplate(
         "blog",
         createClass({
