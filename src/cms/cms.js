@@ -7,7 +7,6 @@ const YOAST = window.YOAST
 var createReactClass = require("create-react-class")
 var YoastComponent = createReactClass({
   render: function() {
-    console.log(`rendering!!!!!`)
     const entry = this.props.entry
     const title = entry.getIn(["data", "title"]) || ""
 
@@ -29,4 +28,4 @@ YoastComponent.propTypes = {
 }
 
 console.log(`running!!!!!(((((((((((((((())))))))))))))))`)
-CMS.registerPreviewTemplate("page", YoastComponent)
+CMS.registerPreviewTemplate("blog", YoastComponent)
