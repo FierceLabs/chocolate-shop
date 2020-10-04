@@ -2,10 +2,11 @@ import CMS from "netlify-cms-app"
 import PropTypes from "prop-types"
 import "netlify-cms-yoast-seo/dist/main.js"
 import "netlify-cms-yoast-seo/dist/main.css"
+import "netlify-cms/dist/netlify-cms.js"
+
 const YOAST = window.YOAST
 
-var createReactClass = require("create-react-class")
-var YoastComponent = createReactClass({
+var YoastComponent = createClass({
   render: function() {
     console.log(`Rendering`)
     const entry = this.props.entry
