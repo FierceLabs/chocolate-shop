@@ -1,7 +1,7 @@
 import CMS from "netlify-cms-app"
 import PropTypes from "prop-types"
 import "netlify-cms-yoast-seo/dist/main.js"
-import "netlify-cms-yoast-seo@~1.0/dist/main.css"
+import "netlify-cms-yoast-seo/dist/main.css"
 const YOAST = window.YOAST
 
 var createReactClass = require("create-react-class")
