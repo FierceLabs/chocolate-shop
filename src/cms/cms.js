@@ -1,6 +1,7 @@
 import CMS from "netlify-cms-app"
 import PropTypes from "prop-types"
 import "netlify-cms-yoast-seo/dist/main.js"
+import "netlify-cms-yoast-seo@~1.0/dist/main.css"
 const YOAST = window.YOAST
 
 var createReactClass = require("create-react-class")
@@ -28,8 +29,4 @@ YoastComponent.propTypes = {
 }
 
 console.log(`running!!!!!(((((((((((((((())))))))))))))))`)
-
-CMS.registerPreviewStyle(
-  "https://unpkg.com/netlify-cms-yoast-seo@~1.0/dist/main.css"
-)
 CMS.registerPreviewTemplate("page", YoastComponent)
