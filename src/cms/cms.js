@@ -7,6 +7,7 @@ const YOAST = window.YOAST
 var createReactClass = require("create-react-class")
 var YoastComponent = createReactClass({
   render: function() {
+    console.log(`Rendering`)
     const entry = this.props.entry
     const title = entry.getIn(["data", "title"]) || ""
 
