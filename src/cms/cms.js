@@ -2,11 +2,10 @@ import CMS from "netlify-cms-app"
 import PropTypes from "prop-types"
 import "netlify-cms-yoast-seo/dist/main.js"
 import "netlify-cms-yoast-seo/dist/main.css"
-import "netlify-cms-app/dist/netlify-cms-app.js"
 
 const YOAST = window.YOAST
 
-var YoastComponent = createClass({
+var YoastComponent = CMS.createClass({
   render: function() {
     console.log(`Rendering`)
     const entry = this.props.entry
@@ -20,7 +19,12 @@ var YoastComponent = createClass({
       titleWidth: title.split("").length * 5, // 5px is an average width of each character ;)
     })
 
-    return h("div", {}, this.props.widgetFor("body"), YOAST.getScoresAsHTML(h))
+    return CMS.h(
+      "div",
+      {},
+      this.props.widgetFor("body"),
+      YOAST.getScoresAsHTML(h)
+    )
   },
 })
 
