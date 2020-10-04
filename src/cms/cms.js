@@ -2,7 +2,7 @@ import CMS from "netlify-cms-app"
 import PropTypes from "prop-types"
 import "netlify-cms-yoast-seo/dist/main.js"
 import "netlify-cms-yoast-seo/dist/main.css"
-import "netlify-cms/dist/netlify-cms.js"
+import "netlify-cms-app/dist/netlify-cms-app.js"
 
 const YOAST = window.YOAST
 
