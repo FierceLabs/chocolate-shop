@@ -2,6 +2,8 @@ import CMS from "netlify-cms-app"
 import "netlify-cms-yoast-seo/dist/main.js"
 const YOAST = window.YOAST
 
+console.log(`Running@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`)
+
 CMS.registerPreviewStyle(
   "https://unpkg.com/netlify-cms-yoast-seo@~1.0/dist/main.css"
 )
