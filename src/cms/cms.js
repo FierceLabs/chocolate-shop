@@ -6,6 +6,7 @@ const YOAST = window.YOAST
 
 class YoastComponent extends React.Component {
   render() {
+    console.log(`rendering!!!!!`)
     const entry = this.props.entry
     const title = entry.getIn(["data", "title"]) || ""
 
@@ -25,6 +26,8 @@ YoastComponent.propTypes = {
   entry: PropTypes.object,
   widgetFor: PropTypes.object,
 }
+
+console.log(`running!!!!!(((((((((((((((())))))))))))))))`)
 
 CMS.registerPreviewStyle(
   "https://unpkg.com/netlify-cms-yoast-seo@~1.0/dist/main.css"
