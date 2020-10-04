@@ -16,5 +16,6 @@ collections:
       - { label: "Audio", name: "audio", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Focus Keyword", name: "yoast_keyword", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
