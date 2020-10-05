@@ -5,7 +5,7 @@ import "netlify-cms-yoast-seo/dist/main.css"
 
 const YOAST = window.YOAST
 
-var YoastComponent = CMS.createClass({
+var YoastComponent = createClass({
   render: function() {
     console.log(`Rendering`)
     const entry = this.props.entry
@@ -19,12 +19,7 @@ var YoastComponent = CMS.createClass({
       titleWidth: title.split("").length * 5, // 5px is an average width of each character ;)
     })
 
-    return CMS.h(
-      "div",
-      {},
-      this.props.widgetFor("body"),
-      YOAST.getScoresAsHTML(h)
-    )
+    return h("div", {}, this.props.widgetFor("body"), YOAST.getScoresAsHTML(h))
   },
 })
 
@@ -33,5 +28,4 @@ YoastComponent.propTypes = {
   widgetFor: PropTypes.any,
 }
 
-console.log(`running!!!!!(((((((((((((((())))))))))))))))`)
 CMS.registerPreviewTemplate("blog", YoastComponent)
