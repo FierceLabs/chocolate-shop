@@ -27,9 +27,9 @@ const ContactPage = ({ data, location }) => {
   const handleSubmit = async e => {
     e.preventDefault()
     const body = {
-      clientEmail: formState.email,
+      clientEmail: "jared@nelsonenterprises.co",
       clientName: "Nelson At The Helm",
-      userEmail: "roial33@hotmail.com",
+      userEmail: formState.email,
       userName: formState.name,
       userSubject: formState.subject,
       type: formState.category,
