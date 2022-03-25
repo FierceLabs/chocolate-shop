@@ -1,14 +1,31 @@
+.pf-container {
+  background-color: rgb(249, 249, 249);
+  padding: 50px;
+  margin: 20px;
+}
+
 .pf-post-feed {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 50px;
   margin: 50px auto;
-  max-width: 1200px;
-  padding: 0 50px;
+  max-width: 1600px;
+}
+
+@media (max-width: 1200px) {
+  .pf-post-feed {
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    margin: 10px auto;
+  }
 }
 
 @media (max-width: 700px) {
+  .pf-container {
+    padding: 30px;
+    margin: 20px;
+  }
   .pf-post-feed {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }

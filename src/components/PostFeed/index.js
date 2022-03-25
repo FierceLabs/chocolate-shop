@@ -6,17 +6,19 @@ import "./styles.css"
 
 const PostFeed = ({ posts }) => {
   return (
-    <div className="pf-post-feed">
-      {posts.map(({ node }, index) => {
-        return (
-          <PostCard
-            key={node.fields.slug}
-            count={index}
-            node={node}
-            postClass={`post`}
-          />
-        )
-      })}
+    <div className="pf-container">
+      <div className="pf-post-feed">
+        {posts.map((post, index) => {
+          return (
+            <PostCard
+              key={post.slug}
+              count={index}
+              post={post}
+              postClass={`post`}
+            />
+          )
+        })}
+      </div>
     </div>
   )
 }

@@ -77,6 +77,18 @@ button,
   box-shadow: inset 0 0 0 2px var(--color-primary);
 }
 
+/* Audio Card Buttons */
+.rhap_main input[type="submit"],
+.rhap_main input[type="reset"],
+.rhap_main input[type="button"],
+.rhap_main button,
+.rhap_main .button {
+  color: var(--color-primary);
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,

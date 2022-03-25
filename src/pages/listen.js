@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -10,8 +10,8 @@ import "../utils/normalize.css"
 import "../utils/css/screen.css"
 
 const ListenPage = ({ data, location }) => {
+  const audioCards = data.allContentfulAudioCard.nodes
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
   const { defaultThumbnail } = data
 
   return (
@@ -25,8 +25,9 @@ const ListenPage = ({ data, location }) => {
         <div className="post-content-body">
           <h2>We just dropped an album. Take a listen!</h2>
           <figure className="kg-card kg-image-card kg-width-full">
-            <Img
-              fluid={data.benchAccounting.childImageSharp.fluid}
+            <StaticImage
+              src="../assets/images/nath.jpg"
+              alt="A boat"
               className="kg-image"
             />
           </figure>
@@ -38,11 +39,11 @@ const ListenPage = ({ data, location }) => {
             haunted by the knowledge that God has a life for us more abundant
             than we can imagine.
           </p>
-          {posts &&
-            posts.map((post, index) => (
+          {audioCards &&
+            audioCards.map((card) => (
               <AudioFeature
-                post={post}
-                key={index}
+                card={card}
+                key={card.title}
                 defaultThumbnail={defaultThumbnail}
               />
             ))}
@@ -64,38 +65,16 @@ const indexQuery = graphql`
         title
       }
     }
-    defaultThumbnail: file(relativePath: { eq: "defaultThumbnail.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1360) {
-          ...GatsbyImageSharpFluid
+    allContentfulAudioCard {
+      nodes {
+        slug
+        title
+        thumbnail {
+          gatsbyImageData(height: 50)
         }
-      }
-    }
-    benchAccounting: file(relativePath: { eq: "album.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1360) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            audio
-            thumbnail {
-              childImageSharp {
-                fluid(maxWidth: 1360) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+        audio {
+          file {
+            url
           }
         }
       }
@@ -103,10 +82,10 @@ const indexQuery = graphql`
   }
 `
 
-const Listen = props => (
+const Listen = (props) => (
   <StaticQuery
     query={indexQuery}
-    render={data => (
+    render={(data) => (
       <ListenPage location={props.location} data={data} {...props} />
     )}
   />

@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 
 import "../utils/normalize.css"
 import "../utils/css/screen.css"
@@ -21,8 +21,9 @@ const AboutPage = ({ data, location }) => {
             and disbanded in 2192
           </h2>
           <figure className="kg-card kg-image-card kg-width-full">
-            <Img
-              fluid={data.benchAccounting.childImageSharp.fluid}
+            <StaticImage
+              src="../assets/images/bench.jpg"
+              alt="A boat"
               className="kg-image"
             />
           </figure>
@@ -101,10 +102,10 @@ const indexQuery = graphql`
   }
 `
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={indexQuery}
-    render={data => (
+    render={(data) => (
       <AboutPage location={props.location} data={data} {...props} />
     )}
   />

@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import AudioPlayer from "react-h5-audio-player"
 import "react-h5-audio-player/lib/styles.css"
@@ -8,44 +8,35 @@ import "./styles.css"
 
 // component class = af
 
-const AudioFeature = ({ post, defaultThumbnail }) => {
-  const { node } = post
-  const { excerpt, frontmatter, fields } = node
-  const { slug } = fields
-  const { audio, thumbnail, title } = frontmatter
+const AudioFeature = ({ card }) => {
+  const { audio, thumbnail, title, slug } = card
+
+  const audioUrl = audio.file.url
+  const image = getImage(thumbnail)
 
   return (
     <div className="af-main-container">
-      <Link to={node.fields.slug}>
+      <Link to={`/${slug}`}>
         <h2 className="title">{title}</h2>
       </Link>
       <div className="desktop">
         <div className="af-container">
           <div className="af-thumbnail">
             {thumbnail && (
-              <Img
-                className="kg-image"
-                fluid={thumbnail.childImageSharp.fluid}
-                alt={title}
-              />
-            )}
-            {!thumbnail && (
-              <Img
-                className="kg-image"
-                fluid={defaultThumbnail.childImageSharp.fluid}
-                alt={title}
-              />
+              <GatsbyImage image={image} className="kg-image" alt={title} />
             )}
           </div>
           <div className="af-audio">
-            {audio && <AudioPlayer src={audio} layout="horizontal-reverse" />}
+            {audio && (
+              <AudioPlayer src={audioUrl} layout="horizontal-reverse" />
+            )}
           </div>
         </div>
       </div>
       <div className="mobile">
         <div>
           <div className="af-audio">
-            {audio && <AudioPlayer src={audio} layout="stacked-reverse" />}
+            {audio && <AudioPlayer src={audioUrl} layout="stacked-reverse" />}
           </div>
         </div>
       </div>
@@ -54,7 +45,18 @@ const AudioFeature = ({ post, defaultThumbnail }) => {
 }
 
 AudioFeature.propTypes = {
-  audio: PropTypes.string.isRequired,
+  card: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    audio: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+    thumbnail: PropTypes.shape({
+      title: PropTypes.string,
+    }).isRequired,
+  }),
 }
 
 export default AudioFeature

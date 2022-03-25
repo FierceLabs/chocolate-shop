@@ -2,13 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .pc-post-card {
   position: relative;
-  flex: 1 1 50%;
   display: flex;
-  position: relative;
-  height: 15vw;
+  height: 250px;
   background: linear-gradient(135deg, #1f1f1f 0%, #111 100%) center center;
   background-size: cover;
   overflow: hidden;
@@ -19,7 +18,6 @@
 
 @media (max-width: 700px) {
   .pc-post-card {
-    flex: 1 1 100%;
     height: 35vw;
   }
 }
@@ -38,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   right: 0;
   bottom: 0;
