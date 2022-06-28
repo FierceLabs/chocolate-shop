@@ -40,7 +40,7 @@ const BlogIndex = ({ data }, location) => {
         <Container>
           <Col>
             <h2 style={{ textAlign: "center" }}>
-              <em>We. The Dreamers</em> is out now! Here&apos;s a quick peek at
+              <i>We. The Dreamers.</i> is out now! Here&apos;s a quick peek at
               the full album.
             </h2>
           </Col>

@@ -31,9 +31,9 @@ const ListenPage = ({ data, location }) => {
               className="kg-image"
             />
           </figure>
-          <h2>All These Dreams</h2>
+          <h2>We. The Dreamers.</h2>
           <p>
-            Our first album, <em>All These Dreams</em>, is full of our hope and
+            Our first album, <em>We. The Dreamers.</em>, is full of our hope and
             desire to change the world. Changing the world starts with us. We
             want to love in purity, we long to be filled with faith, and we are
             haunted by the knowledge that God has a life for us more abundant
