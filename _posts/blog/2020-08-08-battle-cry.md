@@ -1,9 +1,10 @@
 ---
 layout: blog
 title: Battle Cry
-audio: https://nelson-at-the-helm.s3-us-west-2.amazonaws.com/The+Longest+Kiss.mp3
+audio: https://nelson-at-the-helm.s3.us-west-2.amazonaws.com/Battle+Cry_16b_44.1k.mp3
 date: 2020-08-08T20:17:04.960Z
 thumbnail: /content/assets/uploads/battle-cry.jpg
+yoast_keyword: Crying
 description: Battle Cry
 ---
 #### Our battle is not against flesh and blood.
