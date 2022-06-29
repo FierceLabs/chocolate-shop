@@ -7,6 +7,7 @@ thumbnail: /content/assets/uploads/battle-cry.jpg
 yoast_keyword: Crying
 description: Battle Cry
 ---
+
 #### Our battle is not against flesh and blood.
 
 > It's a crying shame,

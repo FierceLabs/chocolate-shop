@@ -7,9 +7,12 @@ thumbnail: /content/assets/uploads/bbbb.jpg
 yoast_keyword: The Haunting
 description: The Haunting
 ---
+
 #### Haunt·ing
+
 /ˈhôn(t)iNG/
 adjective
+
 #### Poignant and evocative; difficult to ignore or forget.
 
 ##### We are haunted by the Holy Ghost. We can't forget that we are more than material.

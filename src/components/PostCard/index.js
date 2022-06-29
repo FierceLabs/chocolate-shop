@@ -16,16 +16,15 @@ const truncateString = (string, index) => {
 }
 
 const PostCard = ({ count, postClass, post }) => {
-  const { title, thumbnail, slug } = post
+  const { title, picture, slug } = post
+  let thumbnail
 
   return (
     <div className="pc-container">
       <article
-        className={`pc-post-card ${postClass} ${
-          thumbnail ? `pc-with-image` : `pc-no-image`
-        }`}
+        className={`pc-post-card ${postClass} ${`pc-with-image`}`}
         style={{
-          backgroundImage: `url(${thumbnail.file.url})`,
+          backgroundImage: `url(${picture.url})`,
           height: "250px",
           width: "250px",
         }}

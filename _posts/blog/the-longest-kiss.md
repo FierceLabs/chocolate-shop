@@ -6,4 +6,5 @@ thumbnail: /content/assets/uploads/the-longest-kiss.jpg
 yoast_keyword: Sixty Short Years
 description: Sixty Short Years
 ---
+
 #### This song was commissioned by our fan and friend, Ronnie, for his wife as an anniversary gift. It is their love story, and it became one of our favorite songs we have written.

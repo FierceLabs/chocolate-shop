@@ -9,26 +9,24 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allContentfulPost(limit: 1000) {
+        allDatoCmsBlog(limit: 1000) {
           edges {
             node {
-              content {
-                raw
-              }
-              title
+              id
               slug
+              title
             }
           }
         }
       }
     `
-  ).then(result => {
+  ).then((result) => {
     if (result.errors) {
       throw result.errors
     }
 
     // Create blog posts pages.
-    const posts = result.data.allContentfulPost.edges
+    const posts = result.data.allDatoCmsBlog.edges
 
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
@@ -49,15 +47,15 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+//   const { createNodeField } = actions
 
-  if (node.internal.type === `ContentfulPost`) {
-    const slug = node.slug
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    })
-  }
-}
+//   if (node.internal.type === `ContentfulPost`) {
+//     const slug = node.slug
+//     createNodeField({
+//       node,
+//       name: `slug`,
+//       value: slug,
+//     })
+//   }
+// }

@@ -7,19 +7,20 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
 import AudioPlayer from "react-h5-audio-player"
+import { StructuredText } from "react-datocms"
 import "react-h5-audio-player/lib/styles.css"
 import "./styles.css"
 
-const BlogPostTemplate = props => {
+const BlogPostTemplate = (props) => {
   console.log(props)
-  const post = props.data.contentfulPost
+  const post = props.data.datoCmsBlog
   const siteTitle = props.data.site.siteMetadata.title
-  const audioUrl = post.audio.file.url
-  const image = getImage(post.thumbnail)
+  const audioUrl = post.audio
+  const image = getImage(post.picture)
 
   return (
     <Layout location={props.location.href} title={siteTitle}>
-      <SEO title={post.title} description={post.description || post.excerpt} />
+      <SEO title={post.title} />
       <article className={`post-content ${post.thumbnail || `pc-no-image`}`}>
         <header className="post-content-header">
           <h1 className="post-content-title">{post.title}</h1>
@@ -29,9 +30,9 @@ const BlogPostTemplate = props => {
           <p class="post-content-excerpt">{post.description}</p>
         )}
 
-        {post.thumbnail && (
+        {post.picture && (
           <div className="post-content-image pc-image-container">
-            {post.thumbnail && (
+            {post.picture && (
               <GatsbyImage
                 image={image}
                 className="kg-image"
@@ -50,7 +51,7 @@ const BlogPostTemplate = props => {
           className="post-content-body"
           // dangerouslySetInnerHTML={{ __html: post.html }}
         >
-          {renderRichText(post.content)}
+          <StructuredText data={post.body} />
         </div>
 
         <footer className="post-content-footer">
@@ -74,16 +75,12 @@ export const pageQuery = graphql`
         author
       }
     }
-    contentfulPost(slug: { eq: $slug }) {
-      audio {
-        file {
-          url
-        }
+    datoCmsBlog(slug: { eq: $slug }) {
+      audio
+      body {
+        value
       }
-      content {
-        raw
-      }
-      thumbnail {
+      picture {
         gatsbyImageData
       }
       slug

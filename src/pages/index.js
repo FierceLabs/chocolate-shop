@@ -10,14 +10,14 @@ import PostFeed from "../components/PostFeed"
 import { handleStyles } from "../lib/accessibility"
 import { Logo, Signature } from "../components/Icons"
 import Spacer from "../components/Spacer"
-import { Col, Row, Container } from "react-bootstrap"
+import { Col, Container } from "react-bootstrap"
 import "../utils/normalize.css"
 import "../utils/css/screen.css"
 
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.allContentfulPost.nodes
+  const posts = data.allDatoCmsBlog.nodes
 
   useEffect(() => handleStyles(), [])
 
@@ -60,22 +60,16 @@ const indexQuery = graphql`
         description
       }
     }
-    allContentfulPost {
+    allDatoCmsBlog {
       nodes {
         slug
         title
-        thumbnail {
-          file {
-            url
-          }
+        picture {
+          url
         }
-        audio {
-          file {
-            url
-          }
-        }
-        content {
-          raw
+        audio
+        body {
+          value
         }
       }
     }

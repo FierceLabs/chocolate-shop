@@ -9,10 +9,10 @@ import "./styles.css"
 // component class = af
 
 const AudioFeature = ({ card }) => {
-  const { audio, thumbnail, title, slug } = card
+  const { audio, picture, title, slug } = card
 
-  const audioUrl = audio.file.url
-  const image = getImage(thumbnail)
+  const audioUrl = audio
+  const image = getImage(picture)
 
   return (
     <div className="af-main-container">
@@ -22,7 +22,7 @@ const AudioFeature = ({ card }) => {
       <div className="desktop">
         <div className="af-container">
           <div className="af-thumbnail">
-            {thumbnail && (
+            {picture && (
               <GatsbyImage image={image} className="kg-image" alt={title} />
             )}
           </div>

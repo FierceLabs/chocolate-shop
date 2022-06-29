@@ -10,7 +10,7 @@ import "../utils/normalize.css"
 import "../utils/css/screen.css"
 
 const ListenPage = ({ data, location }) => {
-  const audioCards = data.allContentfulAudioCard.nodes
+  const audioCards = data.allDatoCmsBlog.nodes
   const siteTitle = data.site.siteMetadata.title
   const { defaultThumbnail } = data
 
@@ -44,7 +44,7 @@ const ListenPage = ({ data, location }) => {
               <AudioFeature
                 card={card}
                 key={card.title}
-                defaultThumbnail={defaultThumbnail}
+                defaultThumbnail={card.picture.url}
               />
             ))}
         </div>
@@ -65,18 +65,14 @@ const indexQuery = graphql`
         title
       }
     }
-    allContentfulAudioCard {
+    allDatoCmsBlog {
       nodes {
         slug
         title
-        thumbnail {
+        picture {
           gatsbyImageData(height: 50)
         }
-        audio {
-          file {
-            url
-          }
-        }
+        audio
       }
     }
   }

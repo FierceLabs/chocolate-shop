@@ -7,4 +7,5 @@ thumbnail: /content/assets/uploads/all-these-dreams-take-2.jpg
 yoast_keyword: All These Dreams
 description: " All These Dreams - Take 2"
 ---
+
 #### And, action.

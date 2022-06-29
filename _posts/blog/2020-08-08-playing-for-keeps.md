@@ -7,6 +7,7 @@ thumbnail: /content/assets/uploads/aspen.jpg
 yoast_keyword: Playing for Keeps
 description: Playing For Keeps
 ---
+
 #### When you find a once-in-a-lifetime kind of girl, you hold on to her and you don't let go.
 
 > We were running downtown.
