@@ -38,7 +38,7 @@
     "gatsby-transformer-sharp": "^3.14.0",
     "gbimage-bridge": "^0.1.4",
     "netlify-cms-yoast-seo": "^1.0.5",
-    "prismjs": "^1.25.0",
+    "prismjs": "^1.27.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-rc.0",
     "react-datocms": "^3.0.15",
