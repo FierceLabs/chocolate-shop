@@ -12,7 +12,6 @@ import "react-h5-audio-player/lib/styles.css"
 import "./styles.css"
 
 const BlogPostTemplate = (props) => {
-  console.log(props)
   const post = props.data.datoCmsBlog
   const siteTitle = props.data.site.siteMetadata.title
   const audioUrl = post.audio

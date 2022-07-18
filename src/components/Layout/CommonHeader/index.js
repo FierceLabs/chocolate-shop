@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import { Facebook, Youtube, Spotify } from "../../Icons"
 
-const CommonHeader = props => {
+const CommonHeader = (props) => {
   const { title, handleClick, location } = props
   return (
     <header className="ch-site-head">
@@ -25,7 +25,7 @@ const CommonHeader = props => {
           <ul className="ch-nav" role="menu">
             <li
               className={`ch-nav-home ${
-                location.pathname === "/" ? "ch-nav-current" : ""
+                location?.pathname === "/" ? "ch-nav-current" : ""
               }`}
               role="menuitem"
             >
@@ -33,7 +33,7 @@ const CommonHeader = props => {
             </li>
             <li
               className={`ch-nav-listen ${
-                location.pathname === "/listen" ? "ch-nav-current" : ""
+                location?.pathname === "/listen" ? "ch-nav-current" : ""
               }`}
               role="menuitem"
             >
@@ -41,7 +41,7 @@ const CommonHeader = props => {
             </li>
             <li
               className={`ch-nav-about ${
-                location.pathname === "/about" ? "ch-nav-current" : ""
+                location?.pathname === "/about" ? "ch-nav-current" : ""
               }`}
               role="menuitem"
             >
@@ -49,7 +49,7 @@ const CommonHeader = props => {
             </li>
             <li
               className={`ch-nav-contact ${
-                location.pathname === "/contact" ? "ch-nav-current" : ""
+                location?.pathname === "/contact" ? "ch-nav-current" : ""
               }`}
               role="menuitem"
             >
