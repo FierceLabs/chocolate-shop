@@ -98,5 +98,7 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+  "browserslist": ["last 2 versions"]
+
 }

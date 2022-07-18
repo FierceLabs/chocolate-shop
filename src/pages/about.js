@@ -25,6 +25,7 @@ const AboutPage = ({ data, location }) => {
               src="../assets/images/bench.jpg"
               alt="A boat"
               className="kg-image"
+              layout="fullWidth"
             />
           </figure>
           <h3 id="dynamic-styles">About the band</h3>

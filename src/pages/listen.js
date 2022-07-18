@@ -28,6 +28,8 @@ const ListenPage = ({ data, location }) => {
             <StaticImage
               src="../assets/images/nath.jpg"
               alt="A boat"
+              placeholder="blurred"
+              layout="fullWidth"
               className="kg-image"
             />
           </figure>
