@@ -6,7 +6,7 @@ import { Facebook, Youtube, Spotify, Logo } from "../Icons"
 import "./styles.css"
 import { customProperties } from "../../lib/exports"
 
-const Footer = props => {
+const Footer = (props) => {
   const { title, color, isOpen } = props
   const fill = color === "black" ? "#ccc" : customProperties["--color-base"]
   return (
@@ -80,7 +80,7 @@ const Footer = props => {
             &copy; {new Date().getFullYear()}{" "}
             <Link to={`/`}>{title.toUpperCase()}</Link> | Built by{" "}
             <a
-              href="https://gatsbyjs.org"
+              href="https://fierceisland.com"
               target="_blank"
               rel="noopener noreferrer"
             >
