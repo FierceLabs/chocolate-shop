@@ -34,7 +34,7 @@
     "gatsby-source-contentful": "^5.14.0",
     "gatsby-source-datocms": "^4.0.4",
     "gatsby-source-filesystem": "^3.14.0",
-    "gatsby-transformer-remark": "^4.11.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^3.14.0",
     "gbimage-bridge": "^0.1.4",
     "netlify-cms-yoast-seo": "^1.0.5",
