@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Mechanical
-audio: https://nelson-at-the-helm.s3.us-west-2.amazonaws.com/Mechanical_16b_44.1k.mp3
+audio: https://nelson-at-the-helm-1.s3.us-east-2.amazonaws.com/Mechanical_16b_44.1k.mp3
 date: 2020-08-08T20:21:33.016Z
 thumbnail: /content/assets/uploads/mechanical.jpg
 yoast_keyword: Mechanical

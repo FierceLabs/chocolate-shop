@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Playing For Keeps
-audio: https://nelson-at-the-helm.s3.us-west-2.amazonaws.com/Playing+For+Keeps_16b_44.1k.mp3
+audio: https://nelson-at-the-helm-1.s3.us-east-2.amazonaws.com/Playing+For+Keeps_16b_44.1k.mp3
 date: 2020-08-08T20:19:44.034Z
 thumbnail: /content/assets/uploads/aspen.jpg
 yoast_keyword: Playing for Keeps
